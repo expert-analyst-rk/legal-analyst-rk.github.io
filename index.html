@@ -8,22 +8,20 @@
     <!-- НАСТРОЙКА ПРЕВЬЮ ДЛЯ WHATSAPP И TELEGRAM -->
     <meta property="og:title" content="Финансово-правовой аналитик">
     <meta property="og:description" content="Экспертное сопровождение экономических споров и ГПО в РК. Анализ рисков на стыке финансов и права.">
-    <!-- Ссылка ниже — это картинка вашего золотого логотипа, которая отобразится в мессенджере -->
     <meta property="og:image" content="https://unsplash.com">
-
     <meta property="og:type" content="website">
 
     <style>
         :root {
-            --bg-color: #160d08; /* Глубокий горький шоколад */
-            --card-bg: #23160f; /* Мягкий шоколадный оттенок для блоков */
-            --text-main: #fcf9f5; /* Благородный молочно-белый для идеальной читаемости */
-            --text-muted: #bdafa6; /* Приглушенный кофейный для второстепенного текста */
-            --gold-gradient: linear-gradient(135deg, #e5c158 0%, #b8860b 50%, #f3e5ab 100%); /* Натуральное золотое свечение */
-            --gold-solid: #d4af37; /* Матовое золото */
+            --bg-color: #160d08; 
+            --card-bg: #23160f; 
+            --text-main: #fcf9f5; 
+            --text-muted: #bdafa6; 
+            --gold-gradient: linear-gradient(135deg, #e5c158 0%, #b8860b 50%, #f3e5ab 100%); 
+            --gold-solid: #d4af37; 
         }
         body {
-            font-family: 'Georgia', 'Times New Roman', Times, serif; /* Классический юридический шрифт */
+            font-family: 'Georgia', 'Times New Roman', Times, serif; 
             background-color: var(--bg-color);
             color: var(--text-main);
             margin: 0;
@@ -34,16 +32,16 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            padding: 60px 24px;
+            padding: 40px 20px;
         }
         header {
             text-align: center;
-            margin-bottom: 70px;
+            margin-bottom: 50px;
             padding-bottom: 40px;
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
         }
         h1 {
-            font-size: 2.6rem;
+            font-size: 2.2rem;
             font-weight: normal;
             margin-bottom: 15px;
             background: var(--gold-gradient);
@@ -52,7 +50,7 @@
             letter-spacing: 1px;
         }
         .subtitle {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             color: var(--text-muted);
             margin-bottom: 35px;
             font-style: italic;
@@ -61,28 +59,30 @@
             display: inline-block;
             background: var(--gold-gradient);
             color: #160d08;
-            padding: 14px 36px;
+            padding: 14px 28px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: bold;
             letter-spacing: 1px;
             box-shadow: 0 4px 15px rgba(184, 134, 11, 0.2);
             transition: transform 0.2s, box-shadow 0.2s;
+            max-width: 100%;
+            box-sizing: border-box;
+            text-align: center;
         }
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(229, 193, 88, 0.4);
         }
         section {
-            margin-bottom: 65px;
+            margin-bottom: 55px;
         }
         h2 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: normal;
             color: var(--gold-solid);
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             letter-spacing: 0.5px;
-            position: relative;
         }
         h2::after {
             content: '';
@@ -94,24 +94,20 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
         .card {
             background-color: var(--card-bg);
-            padding: 30px;
+            padding: 25px;
             border-radius: 4px;
             border: 1px solid rgba(212, 175, 55, 0.1);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transition: border-color 0.3s;
-        }
-        .card:hover {
-            border-color: rgba(212, 175, 55, 0.4);
         }
         .card h3 {
             margin-top: 0;
             font-weight: normal;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             color: var(--text-main);
             border-bottom: 1px solid rgba(252, 249, 245, 0.1);
             padding-bottom: 10px;
@@ -127,14 +123,13 @@
         }
         .case-box {
             background-color: var(--card-bg);
-            padding: 30px;
+            padding: 25px;
             border-radius: 4px;
             margin-bottom: 20px;
             border-left: 3px solid var(--gold-solid);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
         }
         .case-title {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             color: var(--text-main);
             margin-bottom: 10px;
             font-weight: bold;
@@ -144,28 +139,47 @@
             font-size: 0.95rem;
             margin: 0;
         }
+        
+        /* АДАПТИВНЫЙ БЛОК КОНТАКТОВ ДЛЯ ТЕЛЕФОНОВ */
         .contacts-block {
             text-align: center;
             background-color: var(--card-bg);
-            padding: 40px;
+            padding: 30px 20px;
             border-radius: 4px;
             border: 1px dashed rgba(212, 175, 55, 0.2);
+            box-sizing: border-box;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 320px;
+            margin: 25px auto 0 auto;
+        }
+        .contact-link {
+            display: block;
+            border: 1px solid var(--gold-solid);
+            color: var(--text-main);
+            padding: 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background 0.3s;
+            white-space: nowrap; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .contact-link:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: #f3e5ab;
         }
         footer {
             text-align: center;
-            margin-top: 80px;
+            margin-top: 60px;
             color: var(--text-muted);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             border-top: 1px solid rgba(252, 249, 245, 0.05);
             padding-top: 25px;
-        }
-        a {
-            color: var(--gold-solid);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        a:hover {
-            color: #f3e5ab;
         }
     </style>
 </head>
@@ -175,10 +189,11 @@
     <header>
         <h1>Финансово-правовой аналитик</h1>
         <p class="subtitle">Экспертное сопровождение экономических споров и ГПО в Республике Казахстан</p>
-        <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 35px auto; font-size: 1.05rem;">
-            Профессиональный анализ на стыке финансов и права. Минимизация регуляторных рисков,защита активов и правовых позиций.
+        <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 35px auto; font-size: 1rem;">
+            Профессиональный анализ на стыке финансов и права. Минимизация регуляторных рисков, защита активов и  правовых позиций.
         </p>
-        <a href="https://t.me@Monamia_tb target="_blank">Инициировать анализ ситуации</a>
+        <!-- КНОПКА С ОБНОВЛЕННЫМ НОМЕРОМ WHATSAPP -->
+        <a href="https://wa.me." class="btn" target="_blank">Инициировать анализ в WhatsApp</a>
     </header>
 
     <section>
@@ -188,7 +203,7 @@
                 <h3>Судебная аналитика</h3>
                 <ul>
                     <li>Глубокий анализ судебной практики для выработки защищенных правовых позиций.</li>
-                    <li>Формирование процессуальных документов экспертного уровня (иски,ходатайства. жалобы).</li>
+                    <li>Формирование процессуальных документов экспертного уровня (иски,ходатайства,жалобы).</li>
                     <li>Оценка реальных перспектив гражданских, исполнительных и уголовных дел.</li>
                 </ul>
             </div>
@@ -203,8 +218,8 @@
             <div class="card">
                 <h3>Особые направления</h3>
                 <ul>
-                    <li>Полное аналитическое сопровождение процедур судебного банкротства физлиц.</li>
-                    <li>Проведение независимых внутренних финансовых расследований.</li>
+                    <li>Полное аналитическое сопровождение процедур судебного и внесудебного банкротства физлиц.</li>
+                    <li>Проведение независимых внутренних финансовых исследований.</li>
                     <li>Эффективный комплаенс и взаимодействие с государственными институтами РК.</li>
                 </ul>
             </div>
@@ -215,7 +230,7 @@
         <h2>Значимые прецеденты из практики</h2>
         
         <div class="case-box">
-            <div class="case-title">Защита интересов при мошенничестве (ст. 190 УК РК)</div>
+            <div class="case-title">Защита интересов потерпевших при мошенничестве (ст. 190 УК РК)</div>
             <p class="case-text">Провела независимый аудит имущественного баланса, движения средств и контрактов. Сформировала доказательную базу, подтвердившую изначальный криминальный умысел в споре, который оппоненты пытались перевести в гражданское русло. Итог: вынесение обвинительного приговора.</p>
         </div>
 
@@ -232,17 +247,12 @@
 
     <section>
         <div class="contacts-block">
-            <h2 style="margin-top: 0; display: inline-block;">Конфиденциальное обращение.WhatsApp+77776699833</h2>
-            <p style="margin-bottom: 25px;">Практика на всей территории Казахстана.</p>
-            <p><strong>Telegram:</strong> <a href="https://t.me@Monamia_tb="_blank">@Monamia_tb</a></p>
-            <p><strong>Электронная почта:taya2212.lex@gmail.com</a></p>
-        </div>
-    </section>
+            <h2 style="margin-top: 0; display: inline-block;">Конфиденциальное обращение</h2>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">Практика на всей территории Казахстана.</p>
+            
+            <!-- ОБНОВЛЕННЫЕ КНОПКИ ДЛЯ СМАРТФОНОВ -->
+            <div class="contact-buttons">
+                <a href="https://wa.me" class="contact-link" target="_blank">WhatsApp: +7 777 669 9833</a>
+                <a href="https://t.me" class="contact-link" target="_blank">Telegram: @Monamia_tb</a>
+                <a href="mailto:taya.2212.lex@gmail.com" class="contact-link">taya.2212.lex@gmail.com</a>
 
-    <footer>
-        <p>© 2026 Практика финансово-правового анализа. Все материалы и обращения защищены правилами строгой коммерческой тайны РК.</p>
-    </footer>
-</div>
-
-</body>
-</html>
