@@ -1,16 +1,290 @@
-    <section>
-        <div class="contacts-block">
-            <h2 style="margin-top: 0; display: inline-block;">Конфиденциальное обращение</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0 0 20px 0;">Прием входящих документов на аудит в защищенном режиме. Вся территория РК.</p>
-            
-            <div class="contact-buttons">
-                <a href="https://wa.me" class="contact-link" target="_blank">🔘 Разобрать мою ситуацию (WhatsApp)</a>
-                <a href="https://t.me" class="contact-link" target="_blank">Telegram: @Monamia_tb</a>
-                <a href="mailto:taya2212.lex@gmail.com" class="contact-link">taya2212.lex@gmail.com</a>
-            </div>
-        </div>
-    </section>
+   <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правовой стратег | Экспертные решения в РК</title>
 
-    <footer>
-        <p>© 2026 Проект «Правовой стратег». Все материалы и обращения защищены правилами строгой коммерческой тайны и конфиденциальности.</p>
-    </footer>
+    <!-- OG ПРЕВЬЮ ДЛЯ МЕССЕНДЖЕРОВ -->
+    <meta property="og:title" content="Правовой стратег">
+    <meta property="og:description" content="Разобраться в законе. Защитить свои права. Действовать уверенно. Экспертная правовая поддержка в РК.">
+    <meta property="og:image" content="https://unsplash.com">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --bg-color: #140b06; /* Глубокий бархатный шоколад */
+            --card-bg: #1e120b; /* Темно-кофейный для статусных блоков */
+            --text-main: #fdfbf7; /* Мягкий шелковый белый для безупречного чтения */
+            --text-muted: #cbbcb3; /* Мягкий кофейный оттенок */
+            --gold-gradient: linear-gradient(135deg, #e5c158 0%, #b8860b 50%, #f3e5ab 100%); 
+            --gold-solid: #d4af37; /* Матовая поталь */
+        }
+        body {
+            font-family: 'Georgia', 'Times New Roman', Times, serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.9;
+            letter-spacing: 0.3px;
+            -webkit-text-size-adjust: 100%;
+        }
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 70px 24px;
+            box-sizing: border-box;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 75px;
+            padding-bottom: 45px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+        h1 {
+            font-size: 2.8rem;
+            font-weight: normal;
+            margin-top: 0;
+            margin-bottom: 20px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+        .subtitle {
+            font-size: 1.35rem;
+            color: var(--gold-solid);
+            margin-bottom: 35px;
+            font-style: italic;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+        header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 680px;
+            margin: 0 auto 40px auto;
+        }
+        .btn {
+            display: inline-block;
+            background: var(--gold-gradient);
+            color: #140b06;
+            padding: 16px 36px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(184, 134, 11, 0.25);
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(229, 193, 88, 0.45);
+        }
+        section {
+            margin-bottom: 75px;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: normal;
+            color: var(--gold-solid);
+            margin-bottom: 30px;
+            letter-spacing: 0.5px;
+        }
+        h2::after {
+            content: '';
+            display: block;
+            width: 45px;
+            height: 1px;
+            background: var(--gold-solid);
+            margin-top: 14px;
+            opacity: 0.7;
+        }
+        .text-block {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        .text-muted-p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.08);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: normal;
+            font-size: 1.3rem;
+            color: var(--gold-solid);
+            border-bottom: 1px solid rgba(252, 249, 245, 0.08);
+            padding-bottom: 10px;
+        }
+        .card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.7;
+        }
+        .docs-list {
+            margin: 15px 0 0 0;
+            padding-left: 20px;
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+        .docs-list li {
+            margin-bottom: 8px;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        .step-box {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 4px;
+            border-left: 3px solid var(--gold-solid);
+        }
+        .step-num {
+            font-size: 0.85rem;
+            color: var(--gold-solid);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .step-text {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin: 0;
+        }
+        .grid-principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+        .principle-box {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 4px;
+            border: 1px solid rgba(252, 249, 245, 0.02);
+        }
+        .principle-title {
+            color: var(--gold-solid);
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        .principle-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .refuse-box {
+            background-color: rgba(212, 175, 55, 0.02);
+            border: 1px dashed rgba(212, 175, 55, 0.25);
+            padding: 35px 30px;
+            border-radius: 4px;
+            color: var(--text-main);
+            font-style: italic;
+            font-size: 1.05rem;
+            text-align: justify;
+            line-height: 1.9;
+        }
+        .accent-quote {
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-left: 2px solid var(--gold-solid);
+            padding-left: 20px;
+            margin: 30px 0;
+            color: var(--text-main);
+        }
+        .manifesto-text {
+            font-style: italic;
+            text-align: center;
+            color: var(--gold-solid);
+            font-size: 1.1rem;
+            line-height: 1.9;
+            max-width: 700px;
+            margin: 40px auto 0 auto;
+        }
+        .contacts-block {
+            text-align: center;
+            background-color: var(--card-bg);
+            padding: 45px 24px;
+            border-radius: 4px;
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            box-sizing: border-box;
+        }
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 340px;
+            margin: 30px auto 0 auto;
+        }
+        .contact-link {
+            display: block;
+            border: 1px solid var(--gold-solid);
+            color: var(--text-main);
+            padding: 14px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 1.05rem;
+            transition: background 0.3s, color 0.3s;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .contact-link:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            color: #f3e5ab;
+        }
+        footer {
+            text-align: center;
+            margin-top: 70px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(252, 249, 245, 0.05);
+            padding-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <!-- 1. ГЛАВНЫЙ ЭКРАН -->
+    <header>
+        <h1>Правовой стратег</h1>
+        <div class="subtitle">Разобраться в законе. Защитить свои права. Действовать уверенно.</div>
+        <p>
+            Если вы столкнулись с долгами, исполнительным производством, судебным спором или другой сложной правовой ситуацией, важно не паниковать, а понять свои законные возможности. Здесь вы получите профессиональный анализ ситуации, помощь в подготовке документов и понятный алгоритм дальнейших действий. Строго в рамках законодательства Республики Казахстан.
+        </p>
+        <a href="https://wa.me" class="btn" target="_blank">Разобрать мою ситуацию</a>
+    </header>
+
+    <!-- 2. ПОЧЕМУ ПОЯВИЛСЯ ПРОЕКТ -->
+    <section>
+        <h2>Почему появился «Правовой стратег»</h2>
+        <div class="text-block">Каждый человек может оказаться в ситуации, когда кажется, что выхода нет. Потеря работы. Долги. Судебные споры. Исполнительное производство. Болезнь. Ошибки. Жизненные обстоятельства. В такие моменты особенно важно не остаться один на один со своей проблемой.</div>
+        <div class="text-block">Мы верим, что сложная жизненная ситуация не должна лишать человека права понимать закон и защищать свои интересы. Именно поэтому появился проект «Правовой стратег».</div>
