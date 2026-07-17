@@ -1,14 +1,12 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Правовой стратег | Экспертные решения в РК</title>
-    
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
-
+    <link href="https://googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #120a06; 
@@ -18,323 +16,74 @@
             --gold-solid: #c5a059; 
             --gold-gradient: linear-gradient(135deg, #caa96a 0%, #99793d 50%, #e8cf9b 100%);
         }
-        body {
-            font-family: 'Georgia', 'Times New Roman', Times, serif;
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.9;
-            letter-spacing: 0.3px;
-            -webkit-text-size-adjust: 100%;
-        }
-        .container {
-            max-width: 820px;
-            margin: 0 auto;
-            padding: 80px 24px;
-            box-sizing: border-box;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 80px;
-            padding-bottom: 50px;
-            border-bottom: 1px solid rgba(197, 160, 89, 0.12);
-        }
-        h1 {
-            font-family: 'Lora', 'Playfair Display', serif;
-            font-size: 2.5rem; 
-            font-weight: 400;
-            margin: 0 0 25px 0;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 2px; 
-        }
-        .subtitle {
-            font-family: 'Lora', serif;
-            font-size: 1.2rem;
-            color: var(--gold-solid);
-            margin-bottom: 40px;
-            font-style: italic;
-            font-weight: normal;
-            line-height: 1.6;
-            letter-spacing: 0.5px;
-        }
-        header p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            max-width: 660px;
-            margin: 0 auto 40px auto;
-            text-align: justify;
-        }
-        .btn {
-            display: inline-block;
-            background: var(--gold-gradient);
-            color: #120a06;
-            padding: 16px 42px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 20px rgba(153, 121, 61, 0.25);
-            transition: transform 0.25s, box-shadow 0.25s;
-            text-align: center;
-            font-size: 0.95rem;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(202, 169, 106, 0.45);
-        }
-        section {
-            margin-bottom: 80px;
-        }
-        h2 {
-            font-family: 'Lora', serif;
-            font-size: 1.65rem; 
-            font-weight: 400;
-            color: var(--gold-solid);
-            margin-bottom: 35px;
-            letter-spacing: 1.5px;
-        }
-        h2::after {
-            content: '';
-            display: block;
-            width: 35px;
-            height: 1px;
-            background: var(--gold-solid);
-            margin-top: 14px;
-            opacity: 0.4;
-        }
-        .text-block {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 25px;
-            text-align: justify;
-        }
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 26px;
-            margin-top: 35px;
-        }
-        .card {
-            background-color: var(--card-bg);
-            padding: 35px;
-            border-radius: 4px;
-            border: 1px solid rgba(197, 160, 89, 0.06);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            backdrop-filter: blur(4px);
-        }
-        .card h3 {
-            font-family: 'Lora', serif;
-            margin-top: 0;
-            margin-bottom: 16px;
-            font-weight: 400;
-            font-size: 1.25rem;
-            color: var(--text-main);
-            border-bottom: 1px solid rgba(245, 242, 235, 0.05);
-            padding-bottom: 10px;
-            letter-spacing: 0.5px;
-        }
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin: 0;
-            line-height: 1.75;
-        }
-        .docs-list {
-            margin: 15px 0 0 0;
-            padding-left: 20px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-        .docs-list li {
-            margin-bottom: 8px;
-        }
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-        .step-box {
-            background-color: var(--card-bg);
-            padding: 35px;
-            border-radius: 4px;
-            border-left: 2px solid var(--gold-solid);
-        }
-        .step-num {
-            font-family: 'Lora', serif;
-            font-size: 0.85rem;
-            color: var(--gold-solid);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-        .step-text {
-            color: var(--text-main);
-            font-size: 1.05rem;
-            margin: 0;
-        }
-        .grid-principles {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 22px;
-        }
-        .principle-box {
-            background-color: var(--card-bg);
-            padding: 25px;
-            border-radius: 4px;
-            border: 1px solid rgba(197, 160, 89, 0.03);
-        }
-        .principle-title {
-            font-family: 'Lora', serif;
-            color: var(--gold-solid);
-            font-weight: 400;
-            margin-bottom: 10px;
-            font-size: 1.15rem;
-            letter-spacing: 0.5px;
-        }
-        .principle-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin: 0;
-        }
-        .refuse-box {
-            background-color: rgba(197, 160, 89, 0.01);
-            border: 1px dashed rgba(197, 160, 89, 0.2);
-            padding: 35px;
-            border-radius: 4px;
-            color: var(--text-muted);
-            font-style: italic;
-            font-size: 1.05rem;
-            text-align: center;
-        }
-        .manifesto-text {
-            font-style: italic;
-            text-align: center;
-            color: var(--gold-solid);
-            font-size: 1.1rem;
-            line-height: 1.9;
-            max-width: 700px;
-            margin: 40px auto 0 auto;
-        }
-        .contacts-block {
-            text-align: center;
-            background-color: var(--card-bg);
-            padding: 50px 30px;
-            border-radius: 4px;
-            border: 1px solid rgba(197, 160, 89, 0.12);
-            box-sizing: border-box;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        }
-        .contacts-block h2 {
-            font-size: 1.65rem;
-            letter-spacing: 1.5px;
-        }
-        .contacts-block h2::after {
-            margin: 14px auto 0 auto;
-        }
-        .contact-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            max-width: 350px;
-            margin: 35px auto 0 auto;
-        }
-        .contact-link {
-            display: block;
-            border: 1px solid var(--gold-solid);
-            color: var(--text-main);
-            padding: 15px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 1.05rem;
-            transition: background 0.3s, color 0.3s, border-color 0.3s;
-            background: rgba(197, 160, 89, 0.01);
-            letter-spacing: 0.5px;
-        }
-        .contact-link:hover {
-            background: var(--gold-gradient);
-            color: #120a06;
-            font-weight: bold;
-            border-color: #caa96a;
-        }
-        footer {
-            text-align: center;
-            margin-top: 80px;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(245, 242, 235, 0.04);
-            padding-top: 35px;
-        }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 0; line-height: 1.85; letter-spacing: 0.3px; -webkit-text-size-adjust: 100%; }
+        .container { max-width: 820px; margin: 0 auto; padding: 55px 24px; box-sizing: border-box; } /* Сделали более аккуратный верхний отступ */
+        header { text-align: center; margin-bottom: 50px; padding-bottom: 35px; border-bottom: 1px solid rgba(197, 160, 89, 0.12); } /* Компактная шапка */
+        h1 { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 400; margin: 0 0 20px 0; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
+        .subtitle { font-family: 'Lora', serif; font-size: 1.2rem; color: var(--gold-solid); margin-bottom: 30px; font-style: italic; letter-spacing: 0.5px; }
+        header p { color: var(--text-muted); font-size: 1.05rem; max-width: 660px; margin: 0 auto 35px auto; text-align: justify; }
+        .btn { display: inline-block; background: var(--gold-gradient); color: #120a06; padding: 15px 40px; border-radius: 4px; text-decoration: none; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(153, 121, 61, 0.25); transition: transform 0.25s, box-shadow 0.25s; text-align: center; font-size: 0.95rem; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(202, 169, 106, 0.45); }
+        section { margin-bottom: 50px; } /* Уменьшили расстояние между всеми блоками с 80px до 50px */
+        h2 { font-family: 'Lora', serif; font-size: 1.65rem; font-weight: 400; color: var(--gold-solid); margin-bottom: 25px; letter-spacing: 1.5px; }
+        h2::after { content: ''; display: block; width: 35px; height: 1px; background: var(--gold-solid); margin-top: 12px; opacity: 0.4; }
+        .text-block { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; text-align: justify; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 25px; }
+        .card { background-color: var(--card-bg); padding: 30px; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.06); box-shadow: 0 10px 30px rgba(0,0,0,0.2); backdrop-filter: blur(4px); }
+        .card h3 { font-family: 'Lora', serif; margin-top: 0; margin-bottom: 14px; font-weight: 400; font-size: 1.25rem; color: var(--text-main); border-bottom: 1px solid rgba(245, 242, 235, 0.05); padding-bottom: 10px; letter-spacing: 0.5px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.75; }
+        .docs-list { margin: 12px 0 0 0; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; }
+        .docs-list li { margin-bottom: 8px; }
+        .timeline { display: flex; flex-direction: column; gap: 20px; }
+        .step-box { background-color: var(--card-bg); padding: 30px; border-radius: 4px; border-left: 2px solid var(--gold-solid); }
+        .step-num { font-family: 'Lora', serif; font-size: 0.85rem; color: var(--gold-solid); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px; font-weight: bold; }
+        .step-text { color: var(--text-main); font-size: 1.05rem; margin: 0; }
+        .grid-principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .principle-box { background-color: var(--card-bg); padding: 25px; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.03); }
+        .principle-title { font-family: 'Lora', serif; color: var(--gold-solid); font-weight: 400; margin-bottom: 8px; font-size: 1.15rem; letter-spacing: 0.5px; }
+        .principle-desc { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+        .refuse-box { background-color: rgba(197, 160, 89, 0.01); border: 1px dashed rgba(197, 160, 89, 0.2); padding: 30px; border-radius: 4px; color: var(--text-muted); font-style: italic; font-size: 1.05rem; text-align: center; }
+        .manifesto-text { font-style: italic; text-align: center; color: var(--gold-solid); font-size: 1.1rem; line-height: 1.9; max-width: 700px; margin: 35px auto 0 auto; }
+        .contacts-block { text-align: center; background-color: var(--card-bg); padding: 45px 25px; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.12); box-sizing: border-box; box-shadow: 0 15px 40px rgba(0,0,0,0.3); }
+        .contacts-block h2 { font-size: 1.65rem; letter-spacing: 1.5px; }
+        .contacts-block h2::after { margin: 12px auto 0 auto; }
+        .contact-buttons { display: flex; flex-direction: column; gap: 16px; max-width: 350px; margin: 30px auto 0 auto; }
+        .contact-link { display: block; border: 1px solid var(--gold-solid); color: var(--text-main); padding: 14px; border-radius: 4px; text-decoration: none; font-size: 1.05rem; transition: background 0.3s, color 0.3s, border-color 0.3s; background: rgba(197, 160, 89, 0.01); letter-spacing: 0.5px; }
+        .contact-link:hover { background: var(--gold-gradient); color: #120a06; font-weight: bold; border-color: #caa96a; }
+        footer { text-align: center; margin-top: 60px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid rgba(245, 242, 235, 0.04); padding-top: 30px; }
     </style>
 </head>
 <body>
 <div class="container">
     
+    <!-- 1. ГЛАВНЫЙ ЭКРАН -->
     <header>
         <h1>Правовой стратег</h1>
         <div class="subtitle">Разобраться в законе. Защитить свои права. Действовать уверенно.</div>
         <p>Если вы столкнулись с долгами, исполнительным производством, судебным спором или другой сложной правовой ситуацией, важно не паниковать, а понять свои законные возможности. Здесь вы получите профессиональный анализ ситуации, помощь в подготовке документов и понятный алгоритм дальнейших действий. Строго в рамках законодательства Республики Казахстан.</p>
-      <a href="https://wa.me" class="btn">Разобрать мою ситуацию</a>
+        <a href="https://wa.me" class="btn">Разобрать мою ситуацию</a>
 
     </header>
 
+    <!-- 2. ПОЧЕМУ ПОЯВИЛСЯ ПРОЕКТ -->
     <section>
         <h2>Почему появился «Правовой стратег»</h2>
         <div class="text-block">Каждый человек может оказаться в ситуации, когда кажется, что выхода нет. Потеря работы. Долги. Судебные споры. Исполнительное производство. Болезнь. Ошибки. Жизненные обстоятельства. В такие моменты особенно важно не остаться один на один со своей проблемой.</div>
         <div class="text-block">Мы верим, что сложная жизненная ситуация не должна лишать человека права понимать закон и защищать свои интересы. Именно поэтому появился проект «Правовой стратег».</div>
+        <div class="text-block">Наша цель — помочь человеку спокойно разобраться в своей ситуации, понять возможные варианты действий и вернуть уверенность в том, что выход существует. Мы не можем обещать, что проблема исчезнет сразу. Но мы можем сделать всё, чтобы человек перестал чувствовать себя с ней один на один. Наша задача — помочь вам найти не просто готовый ответ, а понять, куда двигаться дальше.</div>
+    </section>
 
+    <!-- 3. ЧЕМ МОЖЕТ БЫТЬ ПОЛЕЗЕН -->
     <section>
         <h2>Чем может быть полезен «Правовой стратег»</h2>
-        <div class="text-block" style="font-style: italic; margin-bottom: 30px;">Мы не предлагаем универсальных решений. Каждая ситуация требует внимательного изучения, анализа и индивидуального подхода.</div>
+        <div class="text-block" style="font-style: italic; margin-bottom: 25px;">Мы не предлагаем универсальных решений. Каждая ситуация требует внимательного изучения, анализа и индивидуального подхода.</div>
         <div class="text-block">Если вы столкнулись с одной из следующих ситуаций, мы готовы помочь вам разобраться в возможных вариантах действий и подготовить необходимые документы.</div>
         
         <div class="card-grid">
             <div class="card">
                 <h3>Судебное банкротство физических лиц</h3>
-                <p>Проведём полный правовой анализ вашей ситуации на соответствие критериям и скрупулезно подготовим необходимые документы.</p>
-            </div>
-            <div class="card">
-                <h3>Исполнительное производство</h3>
-                <p>Разъясним ваши реальные права в рамках исполнительного производства и оперативно подготовим процессуальные документы.</p>
-            </div>
-            <div class="card">
-                <h3>Кредиты, микрозаймы и задолженность</h3>
-                <p>Проанализируем текущую ситуацию с задолженностью и детально рассмотрим возможные законные правовые решения.</p>
-            </div>
-            <div class="card">
-                <h3>Подготовка юридических документов</h3>
-                <p>Профессиональная разработка правовых документов любой сложности:</p>
-                <ul class="docs-list">
-                    <li>Заявления</li>
-                    <li>Жалобы</li>
-                    <li>Ходатайства</li>
-                    <li>Возражения</li>
-                    <li>Официальные обращения и др.</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Правовой анализ документов</h3>
-                <p>Поможем досконально понять истинное юридическое содержание и скрытые последствия любых документов понятным, человеческим языком.</p>
-            </div>
-            <div class="card">
-                <h3>Индивидуальные ситуации</h3>
-                <p>Каждая история уникальна. Именно поэтому мы всегда начинаем работу исключительно с глубокого анализа ситуации, а не с шаблонного ответа.</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- НОВЫЙ СТИЛИЗОВАННЫЙ БЛОК ПРАКТИКИ И ЭКСПЕРТИЗЫ -->
-    <section>
-        <h2>Практическая экспертиза и аналитический опыт</h2>
-        <div class="text-block" style="font-style: italic;">Проекты и прецеденты, сформировавшие глубокую личную практику в сфере антикризисного управления, защиты активов и урегулирования задолженности в Республике Казахстан.</div>
-        
-        <div class="card-grid">
-            <div class="card">
-                <h3>Сопровождение процедур судебного банкротства</h3>
-                <p>Глубокая практическая работа на всех этапах банкротства физических лиц. Взаимодействие с финансовыми управляющими, выявление рисков и защита законных интересов на протяжении всей процедуры до финального списания обязательств.</p>
+             <p>Глубокая практическая работа на всех этапах банкротства физических лиц. Взаимодействие с финансовыми управляющими, выявление рисков и защита законных интересов на протяжении всей процедуры до финального списания обязательств.</p>
             </div>
             <div class="card">
                 <h3>Противодействие мошенничеству</h3>
@@ -354,42 +103,13 @@
             </div>
             <div class="card">
                 <h3>Антикризисное урегулирование задолженности</h3>
-                <p>Результативный опыт системных переговоров с ЧСИ (частными судебными исполнителями), банками, МФО и коллекторскими агентствами для достижения максимально выгодных условий.</p>
+                <p>Результативный опыт жестких и системных переговоров с ЧСИ (частными судебными исполнителями), банками, МФО и коллекторскими агентствами для достижения максимально выгодных условий.</p>
             </div>
         </div>
     </section>
 
+    <!-- 5. НАШИ ПРИНЦИПЫ -->
     <section>
-        <h2>Как проходит работа</h2>
-        <div class="timeline">
-            <div class="step-box"><div class="step-num">Шаг 1</div><p class="step-text">Вы подробно рассказываете о своей ситуации и предоставляете необходимые документы для изучения.</p></div>
-            <div class="step-box"><div class="step-num">Шаг 2</div><p class="step-text">Мы внимательно и всесторонне изучаем материалы, после чего объясняем возможные варианты действий простым и понятным языком.</p></div>
-            <div class="step-box"><div class="step-num">Шаг 3</div><p class="step-text">Подготавливаем необходимые документы и чёткие рекомендации, чтобы вы могли принимать решения спокойно, осознанно и строго в рамках закона.</p></div>
-        </div>
-    </section>
-
-    <section>
-         <!-- БЛОК: ФОРМАТ ВЗАИМОДЕЙСТВИЯ -->
-    <section>
-        <h2>Формат взаимодействия</h2>
-        <div class="text-block" style="font-style: italic;">Дистанционная аналитическая работа и стратегическое планирование без географических барьеров.</div>
-        
-        <div class="card-grid">
-            <div class="card">
-                <h3>География присутствия</h3>
-                <p>Проект «Правовой стратег» действует в защищенном онлайн-режиме <strong>по всей территории Республики Казахстан</strong>. Расстояние не влияет на глубину финансово-правового анализа.</p>
-            </div>
-            <div class="card">
-                <h3>Каналы коммуникации</h3>
-                <p>Взаимодействие и обмен информацией осуществляются через удобные для вас цифровые каналы: <strong>WhatsApp • E-mail • Телефон • Видеосвязь</strong>.</p>
-            </div>
-            <div class="card">
-                <h3>Безопасность данных</h3>
-                <p>Независимо от выбранного формата связи, все передаваемые документы и материалы мгновенно принимаются на аудит под защиту коммерческой тайны.</p>
-            </div>
-        </div>
-    </section>
-
         <h2>Наши принципы</h2>
         <div class="grid-principles">
             <div class="principle-box"><div class="principle-title">Законность</div><p class="principle-desc">Работа исключительно в строгих рамках действующего законодательства Республики Казахстан.</p></div>
@@ -401,17 +121,20 @@
         </div>
     </section>
 
+    <!-- 6. НАШЕ ОБЕЩАНИЕ -->
     <section>
         <h2>Наше обещание</h2>
         <div class="text-block">Мы обещаем говорить с вами честно. Если законное решение существует — мы подробно объясним возможные пути. Если ситуация критически сложная — открыто расскажем обо всех рисках. Если для анализа потребуется дополнительное время — не будем создавать ложных ожиданий.</div>
         <div class="text-block" style="color: var(--text-main); font-weight: bold; font-size: 1.1rem; border-left: 3px solid var(--gold-solid); padding-left: 15px;">И независимо от сложности вашей ситуации вы всегда можете твёрдо рассчитывать на уважительное отношение и профессиональный подход.</div>
     </section>
 
+    <!-- 7. КОГДА МЫ МОЖЕМ ОТКАЗАТЬ -->
     <section>
         <h2>Когда мы можем отказать</h2>
         <div class="refuse-box">Мы принципиально не берёмся за подготовку документов, если в ходе анализа понимаем, что они могут использоваться для прямого нарушения закона, намеренного введения кого-либо в заблуждение или явного злоупотребления правом.</div>
     </section>
 
+    <!-- 8. НАШЕ ОБРАЩАНИЕ -->
     <section>
         <h2>Наше обращение</h2>
         <div class="text-block">Если хотя бы один человек после знакомства с проектом «Правовой стратег» почувствует спокойствие, перестанет панически бояться своей ситуации и поверит, что выход можно искать осознанно и в рамках закона, — значит, этот проект создан не зря.</div>
@@ -419,11 +142,11 @@
         <div class="manifesto-text">Мы не знаем, какой именно путь привёл вас сюда. Но искренне надеемся, что после знакомства с нашим проектом вы почувствуете главное — выход всегда легче искать, когда рядом есть понимание, уважение и закон.</div>
     </section>
 
-    <!-- ИСПРАВЛЕННЫЕ АКТИВНЫЕ ССЫЛКИ СВЯЗИ -->
+    <!-- 9. КОНТАКТЫ И ССЫЛКИ -->
     <section>
         <div class="contacts-block">
             <h2>Конфиденциальное обращение</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0 0 25px 0;">Практика на всей территории Казахстана. Прием входящих документов на аудит в защищенном режиме.</p>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0 0 25px 0;">Практика на всей территории Казахстана.</p>
             <div class="contact-buttons">
                 <a href="https://wa.me" class="contact-link">🔘77776699833</a>
                 <a href="https://telegram.me" class="contact-link">🔘Monamia_tb</a>
@@ -435,3 +158,7 @@
 
     <footer>
         <p>© 2026 Проект «Правовой стратег». Все обращения защищены правилами строгой коммерческой тайны и конфиденциальности.</p>
+    </footer>
+</div>
+</body>
+</html>
