@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Правовой стратег | Цифровая визитка</title>
+    <title>Правовой стратег | LS</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #120a06; /* Наш фирменный горький шоколад */
-            --card-bg: rgba(28, 17, 10, 0.6); 
-            --text-main: #f5f2eb; /* Платиновый шелк */
+            --bg-color: #120a06; 
+            --card-bg: rgba(28, 17, 10, 0.85); 
+            --text-main: #f5f2eb; 
             --text-muted: #c5b6ac; 
-            --gold-solid: #c5a059; /* Матовое золото */
+            --gold-solid: #c5a059; 
             --gold-gradient: linear-gradient(135deg, #caa96a 0%, #99793d 50%, #e8cf9b 100%);
         }
         * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
@@ -21,134 +21,68 @@
             font-family: 'Georgia', serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            margin: 0; padding: 0;
+            display: flex; justify-content: center; align-items: center;
             min-height: 100vh;
-            overflow: hidden;
-            position: relative;
         }
-        /* ЖИВОЙ ШЕЛКОВЫЙ ТУМАН НА ФОНЕ */
-        body::before {
-            content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(216,180,103,0.08) 0%, rgba(0,0,0,0) 70%);
-            top: -50px; left: -50px; filter: blur(50px); animation: float 15s infinite alternate ease-in-out;
-        }
-        body::after {
-            content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%;
-            background: radial-gradient(circle, rgba(245,242,235,0.06) 0%, rgba(0,0,0,0) 70%);
-            bottom: -50px; right: -50px; filter: blur(50px); animation: float 20s infinite alternate ease-in-out -5s;
-        }
-        @keyframes float { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(40px, 30px) scale(1.1); } }
-
         .card-container {
-            width: 100%;
-            max-width: 400px;
-            padding: 40px 30px;
-            text-align: center;
-            position: relative;
-            z-index: 10;
+            width: 100%; max-width: 360px;
+            padding: 40px 24px; text-align: center;
+            background-color: var(--card-bg);
+            border: 1px solid rgba(197, 160, 89, 0.15);
+            border-radius: 8px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            margin: 20px;
         }
-        .logo-wrapper { margin-bottom: 25px; }
+        .logo-wrapper { margin-bottom: 20px; }
         h1 {
-            font-family: 'Lora', serif;
-            font-size: 1.9rem;
-            font-weight: 400;
-            margin: 0 0 10px 0;
-            background: var(--gold-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: 1.5px;
+            font-family: 'Lora', serif; font-size: 1.75rem; font-weight: 400; margin: 0 0 8px 0;
+            background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 1.5px;
         }
-        .tagline {
-            font-family: 'Lora', serif;
-            font-size: 0.95rem;
-            color: var(--gold-solid);
-            font-style: italic;
-            margin-bottom: 35px;
-            letter-spacing: 0.5px;
-        }
-        .buttons-pane {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 40px;
-        }
+        .tagline { font-family: 'Lora', serif; font-size: 0.95rem; color: var(--gold-solid); font-style: italic; margin-bottom: 25px; }
+        .info-pane { margin-bottom: 30px; border-bottom: 1px solid rgba(197, 160, 89, 0.1); padding-bottom: 20px; }
+        .info-phone { color: var(--gold-solid); font-size: 1.2rem; margin-bottom: 6px; font-weight: bold; }
+        .info-tg { color: var(--text-muted); font-size: 0.95rem; }
+        .buttons-pane { display: flex; flex-direction: column; gap: 14px; margin-bottom: 30px; }
         .action-link {
-            display: block;
-            border: 1px solid var(--gold-solid);
-            color: var(--text-main);
-            padding: 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            background: var(--card-bg);
-            backdrop-filter: blur(4px);
-            transition: background 0.3s, color 0.3s, transform 0.2s;
+            display: block; border: 1px solid var(--gold-solid); color: var(--text-main);
+            padding: 14px; border-radius: 4px; text-decoration: none; font-size: 1rem;
+            background: rgba(197, 160, 89, 0.02); transition: background 0.2s, color 0.2s;
         }
-        .action-link:active, .action-link:hover {
-            background: var(--gold-gradient);
-            color: #120a06;
-            font-weight: bold;
-            border-color: #caa96a;
-            transform: scale(0.98);
+        .action-link:active {
+            background: var(--gold-gradient); color: #120a06; font-weight: bold;
         }
-        footer {
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-            opacity: 0.8;
-            border-top: 1px solid rgba(245, 242, 235, 0.05);
-            padding-top: 20px;
-        }
+        footer { font-size: 0.75rem; color: var(--text-muted); line-height: 1.5; }
     </style>
 </head>
 <body>
 <div class="card-container">
-    
     <div class="logo-wrapper">
-        <!-- НАША ИЗЯЩНАЯ МОНОГРАММА LS В РОМБЕ -->
-        <svg width="65" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+        <svg width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
             <path d="M50 2 L98 50 L50 98 L2 50 Z" stroke="url(#cardGold)" stroke-width="1.5" stroke-linejoin="round"/>
             <text x="32" y="58" font-family="'Lora', serif" font-size="32" fill="url(#cardGold)">L</text>
             <text x="52" y="66" font-family="'Lora', serif" font-size="32" fill="url(#cardGold)" font-style="italic">S</text>
-               <div style="margin-bottom: 30px;">
-        <div style="color: var(--gold-solid); font-size: 1.1rem; margin-bottom: 5px;">+7 777 669 9833</div>
-        <div style="color: var(--text-muted); font-size: 0.9rem; letter-spacing: 1px;">Telegram: @Monamia_tb</div>
-    </div>
-
-    <div class="buttons-pane">
-        <a href="https://whatsapp.com" class="action-link" target="_blank">🔘 Связаться в WhatsApp</a>
-        <a href="https://tglink.ru" class="action-link" target="_blank">🔘 Написать в Telegram</a>
-        <a href="https://github.io" class="action-link" target="_blank">🔘 Перейти на основной сайт</a>
-    </div>
-
+            <defs>
+                <linearGradient id="cardGold" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#caa96a"/> <stop offset="50%" stop-color="#99793d"/> <stop offset="100%" stop-color="#e8cf9b"/>
+                </linearGradient>
+            </defs>
         </svg>
     </div>
-
-       <h1>Правовой стратег</h1>
+    <h1>Правовой стратег</h1>
     <div class="tagline">Аналитика. Стратегия. Защита активов.</div>
-
-    <!-- ТЕКСТОВЫЕ КОНТАКТЫ ДЛЯ ДОВЕРИЯ -->
-    <div style="margin-bottom: 30px;">
-        <div style="color: var(--gold-solid); font-size: 1.1rem; margin-bottom: 5px;">+7 777 669 9833</div>
-        <div style="color: var(--text-muted); font-size: 0.9rem; letter-spacing: 1px;">Telegram: @Monamia_tb</div>
+    <div class="info-pane">
+        <div class="info-phone">+7 777 669 9833</div>
+        <div class="info-tg">Telegram: @taya_lawyer_bot</div>
     </div>
-
-    <!-- ИНТЕРАКТИВНЫЕ КНОПКИ -->
     <div class="buttons-pane">
         <a href="https://whatsapp.com" class="action-link" target="_blank">🔘 Связаться в WhatsApp</a>
-        <a href="https://tglink.ru" class="action-link" target="_blank">🔘 Написать в Telegram</a>
+        <a href="https://tglink.ru" class="action-link" target="_blank">🔘 Запустить чат-бота в Telegram</a>
         <a href="https://github.io" class="action-link" target="_blank">🔘 Перейти на основной сайт</a>
     </div>
-
     <footer>
         Конфиденциальность Республики Казахстан<br>© 2026 Проект «LS»
     </footer>
-
 </div>
 </body>
 </html>
