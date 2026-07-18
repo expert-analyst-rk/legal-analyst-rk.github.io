@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правовой стратег | Экспертные решения в РК</title>
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #120a06; --card-bg: rgba(28, 17, 10, 0.6); --text-main: #f5f2eb; --text-muted: #c5b6ac; --gold-solid: #c5a059;
+            --gold-gradient: linear-gradient(135deg, #caa96a 0%, #99793d 50%, #e8cf9b 100%);
+        }
+        body { font-family: 'Georgia', serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 0; line-height: 1.85; letter-spacing: 0.3px; -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; }
+        /* ЭФФЕКТ ЖИВОГО ТУМАННОГО ФОНА СВЕЧЕНИЯ */
+               /* ЭФФЕКТ ЖИВОГО ТУМАННОГО ФОНА СВЕЧЕНИЯ */
+        body::before, body::after { content: ''; position: fixed; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(153,121,61,0.06) 0%, rgba(0,0,0,0) 70%); z-index: -1; animation: floatGlow 25s infinite alternate ease-in-out; }
+        body::before { top: -100px; left: -100px; } body::after { bottom: -100px; right: -100px; animation-duration: 35s; animation-delay: -5s; }
+        @keyframes floatGlow { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(80px, 50px) scale(1.15); } }
+
+        .container { max-width: 820px; margin: 0 auto; padding: 60px 24px; box-sizing: border-box; position: relative; z-index: 2; }
+        header { text-align: center; margin-bottom: 50px; padding-bottom: 35px; border-bottom: 1px solid rgba(197, 160, 89, 0.12); }
+        .logo-box { margin-bottom: 20px; display: inline-block; }
+         h1 { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 400; margin: 0 0 20px 0; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
+        .subtitle { font-family: 'Lora', serif; font-size: 1.2rem; color: var(--gold-solid); margin-bottom: 30px; font-style: italic; letter-spacing: 0.5px; }
+        header p { color: var(--text-muted); font-size: 1.05rem; max-width: 660px; margin: 0 auto 35px auto; text-align: justify; }
+        .btn { display: inline-block; background: var(--gold-gradient); color: #120a06; padding: 15px 40px; border-radius: 4px; text-decoration: none; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(153, 121, 61, 0.25); transition: transform 0.25s, box-shadow 0.25s; text-align: center; font-size: 0.95rem; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(202, 169, 106, 0.45); }
+        section { margin-bottom: 50px; }
+        h2 { font-family: 'Lora', serif; font-size: 1.65rem; font-weight: 400; color: var(--gold-solid); margin-bottom: 25px; letter-spacing: 1.5px; }
+        h2::after { content: ''; display: block; width: 35px; height: 1px; background: var(--gold-solid); margin-top: 12px; opacity: 0.4; }
+        .text-block { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; text-align: justify; }
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 25px; }
+        .card { background-color: var(--card-bg); padding: 30px; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.06); box-shadow: 0 10px 30px rgba(0,0,0,0.2); backdrop-filter: blur(6px); }
+        .card h3 { font-family: 'Lora', serif; margin-top: 0; margin-bottom: 14px; font-weight: 400; font-size: 1.25rem; color: var(--text-main); border-bottom: 1px solid rgba(245, 242, 235, 0.05); padding-bottom: 10px; letter-spacing: 0.5px; }
+        .card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.75; }
+        .docs-list { margin: 12px 0 0 0; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; }
+        .docs-list li { margin-bottom: 8px; }
+        .timeline { display: flex; flex-direction: column; gap: 20px; }
+        .step-box { background-color: var(--card-bg); padding: 30px; border-radius: 4px; border-left: 2px solid var(--gold-solid); backdrop-filter: blur(6px); }
+        .step-num { font-family: 'Lora', serif; font-size: 0.85rem; color: var(--gold-solid); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px; font-weight: bold; }
+        .step-text { color: var(--text-main); font-size: 1.05rem; margin: 0; }
+        .grid-principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .principle-box { background-color: var(--card-bg); padding: 25px; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.03); backdrop-filter: blur(6px); }
+        .principle-title { font-family: 'Lora', serif; color: var(--gold-solid); font-weight: 400; margin-bottom: 8px; font-size: 1.15rem; letter-spacing: 0.5px; }
+        .principle-desc { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
+        .refuse-box { background-color: rgba(197, 160, 89, 0.01); border: 1px dashed rgba(197, 160, 89, 0.2); padding: 30px; border-radius: 4px; color: var(--text-muted); font-style: italic; font-size: 1.05rem; text-align: center; }
+        .manifesto-text { font-style: italic; text-align: center; color: var(--gold-solid); font-size: 1.1rem; line-height: 1.9; max-width: 700px; margin: 35px auto 0 auto; }
+        .contacts-block { text-align: center; background-color: var(--card-bg); padding: 45px 25px; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.12); box-sizing: border-box; box-shadow: 0 15px 40px rgba(0,0,0,0.3); backdrop-filter: blur(6px); }
+        .contacts-block h2 { font-size: 1.65rem; letter-spacing: 1.5px; }
+        .contacts-block h2::after { margin: 12px auto 0 auto; }
+        .contact-buttons { display: flex; flex-direction: column; gap: 16px; max-width: 350px; margin: 30px auto 0 auto; }
+        .contact-link { display: block; border: 1px solid var(--gold-solid); color: var(--text-main); padding: 14px; border-radius: 4px; text-decoration: none; font-size: 1.05rem; transition: background 0.3s, color 0.3s; background: rgba(197, 160, 89, 0.01); letter-spacing: 0.5px; }
+        .contact-link:hover { background: var(--gold-gradient); color: #120a06; font-weight: bold; border-color: #caa96a; }
+        footer { text-align: center; margin-top: 60px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid rgba(245, 242, 235, 0.04); padding-top: 30px; }
+           /* Панель переключателя языков KZ/RU/EN */
+        .lang-switcher { 
+            display: flex; 
+            justify-content: center; 
+            gap: 12px; 
+            margin-bottom: 30px; 
+            padding-bottom: 10px;
+        }
+        .lang-btn { 
+            background: rgba(28, 17, 10, 0.6); 
+            border: 1px solid var(--gold-solid); 
+            color: var(--text-main); 
+            padding: 8px 20px; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            font-family: 'Lora', serif; 
+            font-size: 0.9rem; 
+            letter-spacing: 1px;
+            transition: all 0.3s ease; 
+        }
+        .lang-btn.active { 
+            background: var(--gold-gradient); 
+            color: #120a06; 
+            font-weight: bold; 
+            box-shadow: 0 2px 10px rgba(153, 121, 61, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+        <!-- ПЕРЕКЛЮЧАТЕЛЬ ЯЗЫКОВ ПО ЗАКОНУ РК -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-kz" onclick="changeLang('kz')">KZ</button>
+        <button class="lang-btn" id="btn-ru" onclick="changeLang('ru')">RU</button>
+        <button class="lang-btn" id="btn-en" onclick="changeLang('en')">EN</button>
+    </div>
+
+    
+       <!-- 1. ГЛАВНЫЙ ЭКРАН С ПОДДЕРЖКОЙ ЯЗЫКОВ -->
+    <header>
+        <div class="logo-box">
+            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+                <path d="M50 2 L98 50 L50 98 L2 50 Z" stroke="url(#goldGlaze)" stroke-width="1.5" stroke-linejoin="round"/>
+                <text x="32" y="58" font-family="'Lora', serif" font-size="32" fill="url(#goldGlaze)" font-weight="400">L</text>
+                <text x="52" y="66" font-family="'Lora', serif" font-size="32" fill="url(#goldGlaze)" font-style="italic" font-weight="400">S</text>
+                <defs>
+                    <linearGradient id="goldGlaze" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#caa96a"/> <stop offset="50%" stop-color="#99793d"/> <stop offset="100%" stop-color="#e8cf9b"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        
+        <h1>
+            <span lang="kz">Құқықтық стратег</span>
+            <span lang="ru">Правовой стратег</span>
+            <span lang="en">Legal Strategist</span>
+        </h1>
+        
+        <div class="subtitle">
+            <span lang="kz">Заңды түсіну. Өз құқықтарыңды қорғау. Сенімді әрекет ету.</span>
+            <span lang="ru">Разобраться в законе. Защитить свои права. Действовать уверенно.</span>
+            <span lang="en">Understand the law. Protect your rights. Act with confidence.</span>
+        </div>
+        
+        <p lang="kz">Егер сіз борыштармен, атқарушылық іс жүргізумен, сот дауымен немесе басқа да күрделі құқықтық жағдаймен тап болсаңыз, дүрбелеңге түспей, өзіңіздің заңды мүмкіндіктеріңізді түсіну маңызды. Бұл жерде сіз жағдайды кәсіби талдаудан өткізіп, құжаттарды дайындауға көмек және бұдан былайғы іс-әрекеттердің түсінікті алгоритмін аласыз. Қазақстан Республикасының заңнамасы аясында қатаң түрде.</p>
+        <p lang="ru">Если вы столкнулись с долгами, исполнительным производством, судебным спором или другой сложной правовой ситуацией, важно не паниковать, а понять свои законные возможности. Здесь вы получите профессиональный анализ ситуации, помощь в подготовке документов и понятный алгоритм дальнейших действий. Строго в рамках законодательства Республики Казахстан.</p>
+        <p lang="en">If you are facing debts, enforcement proceedings, a legal dispute, or any other complex legal situation, it is crucial not to panic but to understand your legal options. Here you will receive a professional analysis of your situation, assistance in preparing documents, and a clear algorithm for further actions. Strictly within the framework of the legislation of the Republic of Kazakhstan.</p>
+        
+        <a href="https://whatsapp.com" class="btn" target="_blank">
+            <span lang="kz">Менің жағдайымды талдау</span>
+            <span lang="ru">Разобрать мою ситуацию</span>
+            <span lang="en">Analyze my situation</span>
+        </a>
+    </header>
+
+
+    <section>
+        <h2>Почему появился «Правовой стратег»</h2>
+        <div class="text-block">Каждый человек может оказаться в ситуации, когда кажется, что выхода нет. Потеря работы. Долги. Судебные споры. Исполнительное производство. Болезнь. Ошибки. Жизненные обстоятельства. В такие моменты особенно важно не остаться один на один со своей проблемой.</div>
+        <div class="text-block">Мы верим, что сложная жизненная ситуация не должна лишать человека права понимать закон и защищать свои интересы. Именно поэтому появился проект «Правовой стратег».</div>
+        <div class="text-block">Наша цель — помочь человеку спокойно разобраться в своей ситуации, понять возможные варианты действий и вернуть уверенность в том, что выход существует. Мы не можем обещать, что проблема исчезнет сразу. Но мы можем сделать всё, чтобы человек перестал чувствовать себя с ней один на один. Наша задача — помочь вам найти не просто готовый ответ, а понять, куда двигаться дальше.</div>
+    </section>
+
+    <section>
+        <h2>Чем может быть полезен «Правовой стратег»</h2>
+        <div class="text-block" style="font-style: italic; margin-bottom: 25px;">Мы не предлагаем универсальных решений. Каждая ситуация требует внимательного изучения, анализа и индивидуального подхода.</div>
+        <div class="text-block">Если вы столкнулись с одной из следующих ситуаций, мы готовы помочь вам разобраться в возможных вариантах действий и подготовить необходимые документы.</div>
+        <div class="card-grid">
+            <div class="card">
+                <h3>Судебное банкротство физических лиц</h3>
+                <p>Проведём полный правовой анализ вашей ситуации на соответствие критериям и скрупулезно подготовим необходимые документы.</p>
+            </div>
+            <div class="card">
+                <h3>Исполнительное производство</h3>
+                <p>Разъясним ваши реальные права в рамках исполнительного производства и оперативно подготовим процессуальные документы.</p>
+            </div>
+            <div class="card">
+                <h3>Кредиты, микрозаймы и задолженность</h3>
+                <p>Проанализируем текущую ситуацию с задолженностью и детально рассмотрим возможные законные правовые решения.</p>
+            </div>
+            <div class="card">
+                <h3>Подготовка юридических документов</h3>
+                <p>Профессиональная разработка правовых документов любой сложности:</p>
+                <ul class="docs-list">
+                    <li>Заявления</li><li>Жалобы</li><li>Ходатайства</li><li>Возражения</li><li>Официальные обращения и др.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Правовой анализ документов</h3>
+                <p>Поможем досконально понять истинное юридическое содержание и скрытые последствия любых документов понятным, человеческим языком.</p>
+            </div>
+            <div class="card">
+                <h3>Индивидуальные ситуации</h3>
+                <p>Каждая история уникальна. Именно поэтому мы всегда начинаем работу исключительно с глубокого анализа ситуации, а не с шаблонного ответа.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Как проходит работа</h2>
+        <div class="timeline">
+            <div class="step-box"><div class="step-num">Шаг 1</div><p class="step-text">Вы подробно рассказываете о своей ситуации и предоставляете необходимые документы для изучения.</p></div>
+            <div class="step-box"><div class="step-num">Шаг 2</div><p class="step-text">Мы внимательно и всесторонне изучаем материалы, после чего объясняем возможные варианты действий простым и понятным языком.</p></div>
+            <div class="step-box"><div class="step-num">Шаг 3</div><p class="step-text">Подготавливаем необходимые документы и чёткие рекомендации, чтобы вы могли принимать решения спокойно, осознанно и строго в рамках закона.</p></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Формат взаимодействия</h2>
+        <div class="text-block" style="font-style: italic; margin-bottom: 25px;">Дистанционная аналитическая работа и стратегическое планирование без географических барьеров.</div>
+        <div class="card-grid">
+            <div class="card">
+                <h3>География присутствия</h3>
+                <p>Проект «Правовой стратег» действует в защищенном онлайн-режиме <strong>по всей территории Республики Казахстан</strong>. Расстояние не влияет на глубину финансово-аналитического анализа.</p>
+            </div>
+            <div class="card">
+                <h3>Каналы коммуникации</h3>
+                <p>Взаимодействие и обмен информацией осуществляются через удобные для вас цифровые каналы: <strong>WhatsApp • E-mail • Телефон • Видеосвязь</strong>.</p>
+            </div>
+        </div>
+<section>
+            <section>
+        <h2>Личная практика и стратегический опыт</h2>
+        <div class="text-block" style="font-style: italic; margin-bottom: 25px;">Проект «Правовой стратег» — результат 15 лет успешного предпринимательства и личного прохождения через сложнейшие правовые барьеры Республики Казахстан.</div>
+        
+        <div class="card-grid">
+            <div class="card">
+                <h3>Предпринимательство (15 лет)</h3>
+                <p>Создание и управление бизнесом с нуля. Полный цикл администрирования, финансового планирования и успешной реализации активов с сохранением безупречной деловой репутации.</p>
+            </div>
+            <div class="card">
+                <h3>Госзакупки и тендеры (4 года)</h3>
+                <p>Экспертная работа с регламентами, сложной документацией и государственными институтами внутри системы тендеров РК.</p>
+            </div>
+            <div class="card">
+                <h3>Сопровождение процедур банкротства</h3>
+                <p>Глубокая практическая работа на всех этапах банкротства физических лиц. Взаимодействие с финансовыми управляющими, выявление рисков и защита законных интересов на протяжении всей процедуры до финального списания обязательств.</p>
+            </div>
+            <div class="card">
+                <h3>Противодействие мошенничеству</h3>
+                <p>Успешный личный опыт ведения сложных дел, связанных с финансовыми махинациями, — от сбора доказательной базы до доведения процесса до обвинительного приговора суда.</p>
+            </div>
+            <div class="card">
+                <h3>Взыскание дебиторской задолженности</h3>
+                <p>Полный цикл управления ГПО (гражданско-правовыми обязательствами) в ситуациях активного сопротивления должника. Опыт выявления намеренного вывода имущества, скрытых активов и оспаривания сделок.</p>
+            </div>
+            <div class="card">
+                <h3>Управление долями активов</h3>
+                <p>Практика выдела, оценки и реализации 1/2 доли в имуществе должников, включая преодоление юридических препятствий со стороны оппонентов.</p>
+            </div>
+            <div class="card">
+                <h3>Взаимодействие по ст. 430 УК РК</h3>
+                <p>Текущая практическая работа с правоохранительными органами по привлечению должников к уголовной ответственности за злостное неисполнение судебных актов.</p>
+            </div>
+            <div class="card">
+                <h3>Финансовая дисциплина</h3>
+                <p>4 года опыта в банковской сфере. Стратегическое и чистое завершение предпринимательской деятельности без задолженностей, в строгом соответствии с рекомендациями налоговых органов.</p>
+            </div>
+            <div class="card">
+                <h3>Антикризисное урегулирование</h3>
+                <p>Результативный опыт жестких и системных переговоров с ЧСИ (частными судебными исполнителями), банками, МФО и коллекторскими агентствами для достижения максимально выгодных условий.</p>
+            </div>
+            <div class="card">
+                <h3>Доступная защита прав</h3>
+                <p>Помогаем готовить процессуальные документы и выстраивать позицию для самостоятельных действий, существенно снижая ваши затраты на защиту.</p>
+            </div>
+            <div class="card">
+                <h3>Партнерство с адвокатурой</h3>
+                <p>Для случаев, требующих обязательного представительства в суде, мы обеспечиваем надежное взаимодействие с проверенным партнером-адвокатом.</p>
+            </div>
+                        <div class="card">
+                <h3>Вопросы и ответы (FAQ)</h3>
+                <p>Базовые разъяснения по регламенту экспресс-аудита материалов, подготовке базового пакета документов и алгоритмам запуска чат-бота для новых доверителей.</p>
+            </div>
+
+        </div>
+    </section>
+
+        <h2>Наши принципы</h2>
+        <div class="grid-principles">
+            <div class="principle-box"><div class="principle-title">Законность</div><p class="principle-desc">Работа исключительно в строгих рамках действующего законодательства Республики Казахстан.</p></div>
+            <div class="principle-box"><div class="principle-title">Честность</div><p class="principle-desc">Мы никогда не даем пустых обещаний и не обещаем заведомо невозможного.</p></div>
+            <div class="principle-box"><div class="principle-title">Понятный язык</div><p class="principle-desc">Комфортное взаимодействие и разъяснение сути без перегрузки сложной терминологией.</p></div>
+            <div class="principle-box"><div class="principle-title">Индивидуальный подход</div><p class="principle-desc">Каждая ситуация без исключений требует обособленного и детального анализа.</p></div>
+            <div class="principle-box"><div class="principle-title">Конфиденциальность</div><p class="principle-desc">Мы бережно и с высочайшей ответственностью относимся к информации, которую нам доверяют.</p></div>
+            <div class="principle-box"><div class="principle-title">Ответственность</div><p class="principle-desc">Каждый процессуальный документ готовится экспертно, внимательно и профессионально.</p></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Наше обещание</h2>
+        <div class="text-block">Мы обещаем говорить с вами честно. Если законное решение существует — мы подробно объясним возможные пути. Если ситуация критически сложная — открыто расскажем обо всех рисках. Если для анализа потребуется дополнительное время — не будем создавать ложных ожиданий.</div>
+        <div class="accent-quote" style="border-left: 2px solid var(--gold-solid); padding-left: 15px;">И независимо от сложности вашей ситуации вы всегда можете твёрдо рассчитывать на уважительное отношение и профессиональный подход.</div>
+    </section>
+
+    <section>
+        <h2>Когда мы можем отказать</h2>
+        <div class="refuse-box">Мы принципиально не берёмся за подготовку документов, если в ходе анализа понимаем, что они могут использоваться для прямого нарушения закона, намеренного введения кого-либо в заблуждение или явного злоупотребления правом.</div>
+    </section>
+
+    <section>
+        <h2>Наше обращение</h2>
+        <div class="text-block">Если хотя бы один человек после знакомства с проектом «Правовой стратег» почувствует спокойствие, перестанет панически бояться своей ситуации и поверит, что выход можно искать осознанно и в рамках закона, — значит, этот проект создан не зря.</div>
+        <div class="text-block">Мы понимаем, что не можем изменить прошлое. Не можем обещать лёгких иллюзорных решений. Не можем гарантировать исход каждого отдельного дела. Но мы можем сделать всё, чтобы человек перестал чувствовать себя один на один со своей проблемой. Именно в этом мы видим главный смысл нашей работы.</div>
+        <div class="manifesto-text">Мы не знаем, какой именно путь привёл вас сюда. Но искренне надеемся, что после знакомства с нашим проектом вы почувствуете главное — выход всегда легче искать, когда рядом есть понимание, уважение и закон.</div>
+    </section>
+
+    <section>
+                <div class="contacts-block">
+            <h2>Конфиденциальное обращение</h2>
+            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0 0 30px 0;">Практика на всей территории Казахстана.</p>
+            
+            <!-- ДВУХКОЛОНОЧНЫЙ БЛОК: СВЯЗЬ И РЕГЛАМЕНТ -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 35px; text-align: left; max-width: 740px; margin: 0 auto;">
+                
+                <!-- ЛЕВАЯ КОЛОНКА: КНОПКИ СВЯЗИ -->
+                                <div class="contact-buttons" style="margin: 0; max-width: 100%;">
+                   <a href="https://wa.me" class="contact-link">🔘77776699833</a>
+                   <a href="https://telegram.me" class="contact-link">🔘taya_lawyer_bot</a>
+                   <a href="mailto:taya2212.lex@gmail.com" class="contact-link">🔘 taya2212.lex@gmail.com</a>
+
+                </div>
+
+                
+                <!-- ПРАВАЯ КОЛОНКА: СТРОГИЙ РЕГЛАМЕНТ ПРИЕМА -->
+                <div style="background: rgba(252, 249, 245, 0.02); border-left: 2px solid var(--gold-solid); padding: 10px 0 10px 25px; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="font-family: 'Lora', serif; color: var(--gold-solid); font-size: 1.15rem; margin-bottom: 12px; letter-spacing: 0.5px;">Регламент обработки обращений</div>
+                    <div style="color: var(--text-main); font-size: 0.95rem; margin-bottom: 8px;">
+                        <strong>График приема:</strong><br>
+                        Пн–Пт: 10:00 – 19:00 | Сб: 10:00 – 13:00<br>
+                        <span style="color: #e57373; opacity: 0.9;">Воскресенье — выходной</span>
+                    </div>
+                    <div style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; font-style: italic;">
+                        Первичныое обращение  проводится строго в порядке очереди и по предварительной обязательной записи. Некорректные вызовы игнорируются.
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+        <p>© 2026 Проект «Правовой стратег». Все обращения защищены правилами строгой коммерческой тайны и конфиденциальности Республики Казахстан.</p>
+    </footer>
+</div>
+</body>
+<script>
+    function changeLang(langCode) {
+        // Находим все элементы, у которых прописан язык
+        const elements = document.querySelectorAll('[lang]');
+        
+        elements.forEach(el => {
+            // Проверяем, совпадает ли язык элемента с выбранным
+            if (el.getAttribute('lang') === langCode) {
+                // Если элемент — это строчный текст (span, strong, a), делаем его inline
+                const tagName = el.tagName.toLowerCase();
+                if (tagName === 'span' || tagName === 'strong' || tagName === 'a') {
+                    el.style.display = 'inline';
+                } else {
+                    el.style.display = 'block';
+                }
+            } else {
+                // Скрываем все остальные языки
+                el.style.display = 'none';
+            }
+        });
+
+        // Визуально переключаем активность кнопок
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        document.getElementById(`btn-${langCode}`).classList.add('active');
+    }
+
+    // Автоматический запуск КАЗАХСКОГО языка по умолчанию при открытии
+    document.addEventListener("DOMContentLoaded", () => {
+        // Пока мы не обернули весь сайт в теги lang, эта функция подготовит базу
+        changeLang('ru'); // Временно оставляем RU активным, чтобы сайт не опустел до перевода
+    });
+</script>
+
+</html>
