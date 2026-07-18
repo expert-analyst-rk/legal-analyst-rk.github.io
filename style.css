@@ -54,3 +54,8 @@ h2::after { content: ''; display: block; width: 35px; height: 1px; background: v
 .contact-link { display: block; border: 1px solid var(--gold-solid); color: var(--text-main); padding: 14px; border-radius: 4px; text-decoration: none; font-size: 1.05rem; transition: background 0.3s, color 0.3s; background: rgba(197, 160, 89, 0.01); letter-spacing: 0.5px; }
 .contact-link:hover { background: var(--gold-gradient); color: #120a06; font-weight: bold; border-color: #caa96a; }
 footer { text-align: center; margin-top: 60px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid rgba(245, 242, 235, 0.04); padding-top: 30px; }
+/* Жесткое скрытие неактивных языков до нажатия кнопок */
+[lang="kz"], [lang="ru"], [lang="en"] { display: none; }
+
+/* Фиксация аккуратного премиального размера золотой кнопки */
+.btn { max-width: 320px; width: 100%; margin: 0 auto; display: inline-block; }
