@@ -278,16 +278,16 @@
 
 
                 
-                <!-- ПРАВАЯ КОЛОНКА: СТРОГИЙ РЕГЛАМЕНТ ПРИЕМА -->
+               <!-- ПРАВАЯ КОЛОНКА: СТРОГИЙ РЕГЛАМЕНТ ПРИЕМА -->
                 <div style="background: rgba(252, 249, 245, 0.02); border-left: 2px solid var(--gold-solid); padding: 10px 0 10px 25px; display: flex; flex-direction: column; justify-content: center;">
-                    <div style="font-family: 'Lora', serif; color: var(--gold-solid); font-size: 1.15rem; margin-bottom: 12px; letter-spacing: 0.5px;">Регламент обработки обращений</div>
+                    <div style="font-family: 'Lora', serif; color: var(--gold-solid); font-size: 1.15rem; margin-bottom: 12px; letter-spacing: 0.5px;">Regulations for Processing Appeals</div>
                     <div style="color: var(--text-main); font-size: 0.95rem; margin-bottom: 8px;">
-                        <strong>График приема:</strong><br>
-                        Пн–Пт: 10:00 – 19:00 | Сб: 10:00 – 13:00<br>
-                        <span style="color: #e57373; opacity: 0.9;">Воскресенье — выходной</span>
+                        <strong>Reception Schedule:</strong><br>
+                        Mon–Fri: 10:00 AM – 7:00 PM | Sat: 10:00 AM – 1:00 PM<br>
+                        <span style="color: #e57373; opacity: 0.9;">Sunday — Closed</span>
                     </div>
                     <div style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; font-style: italic;">
-                        Первичныое обращение  проводится строго в порядке очереди и по предварительной обязательной записи. Некорректные вызовы игнорируются.
+                        Initial inquiries are conducted strictly on a first-come, first-served basis and by mandatory prior appointment. Inappropriate calls are ignored.
                     </div>
                 </div>
                 
@@ -296,44 +296,8 @@
     </section>
 
     <footer>
-
-        <p>© 2026 Проект «Правовой стратег». Все обращения защищены правилами строгой коммерческой тайны и конфиденциальности Республики Казахстан.</p>
+        <p>© 2026 Project "Legal Strategist". All appeals are protected by the rules of strict commercial secrecy and confidentiality of the Republic of Kazakhstan.</p>
     </footer>
 </div>
 </body>
-<script>
-    function changeLang(langCode) {
-        // Находим все элементы, у которых прописан язык
-        const elements = document.querySelectorAll('[lang]');
-        
-        elements.forEach(el => {
-            // Проверяем, совпадает ли язык элемента с выбранным
-            if (el.getAttribute('lang') === langCode) {
-                // Если элемент — это строчный текст (span, strong, a), делаем его inline
-                const tagName = el.tagName.toLowerCase();
-                if (tagName === 'span' || tagName === 'strong' || tagName === 'a') {
-                    el.style.display = 'inline';
-                } else {
-                    el.style.display = 'block';
-                }
-            } else {
-                // Скрываем все остальные языки
-                el.style.display = 'none';
-            }
-        });
-
-        // Визуально переключаем активность кнопок
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        document.getElementById(`btn-${langCode}`).classList.add('active');
-    }
-
-    // Автоматический запуск КАЗАХСКОГО языка по умолчанию при открытии
-    document.addEventListener("DOMContentLoaded", () => {
-        // Пока мы не обернули весь сайт в теги lang, эта функция подготовит базу
-        changeLang('ru'); // Временно оставляем RU активным, чтобы сайт не опустел до перевода
-    });
-</script>
-
 </html>
