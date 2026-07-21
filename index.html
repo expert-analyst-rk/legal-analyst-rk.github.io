@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Правовой стратег | Экспертные решения в РК</title>
-      <style>
-                                                                    :root {
-            --bg-space: #070d19;          
-            --bg-card: rgba(255, 255, 255, 0.02); 
-            --color-mint: #ffffff;        /* Кристально-белый для заголовка */
-            --color-purple: #caa96a;      /* Фирменное золото взамен неона */
-            --color-ochre: #caa96a;       
-            --text-muted: rgba(255, 255, 255, 0.75); /* Матовый белый для текстов */
-            --text-sub: rgba(255, 255, 255, 0.85);   /* Облегченный белый для субтитров */
-            
-            --radius-terminal: 4px;       /* Премиальная строгая геометрия углов */
-            --glow-orange: 0 4px 15px rgba(202, 169, 106, 0.15); 
-            --transition-smooth: all 0.3s ease;
-        }
+      <style><style>
+    :root {
+        --bg-space: #070d19;          
+        --bg-card: rgba(255, 255, 255, 0.02); 
+        --color-mint: #ffffff;        /* Кристально-белый для главного заголовка */
+        --color-purple: #caa96a;      /* Благородное золото вместо неона */
+        --color-ochre: #caa96a;       
+        --text-muted: rgba(255, 255, 255, 0.75); /* Матовый белый для текстов */
+        --text-sub: rgba(255, 255, 255, 0.85);   /* Выдержанный белый для субтитров */
+        
+        --radius-terminal: 8px;       /* Строгая геометрия углов карточек */
+        --glow-orange: 0 4px 15px rgba(202, 169, 106, 0.15); 
+        --transition-smooth: all 0.3s ease;
+    }
 
-        body { 
-            font-family: 'Lora', 'Georgia', serif; 
-            background-color: var(--bg-space); 
-            background-image: linear-gradient(rgba(11, 19, 41, 0.35), rgba(11, 19, 41, 0.6)), url('bg-space.png');
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
-
-        }
+    body { 
+        font-family: 'Lora', 'Georgia', serif; 
+        background-color: var(--bg-space); 
+        background-image: linear-gradient(rgba(11, 19, 41, 0.35), rgba(11, 19, 41, 0.6)), url('bg-space.png');
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        color: var(--text-muted); 
+        margin: 0; padding: 0; line-height: 1.8; letter-spacing: 0.5px; 
+        -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; 
+    }
 
               /* 1. Делаем шрифт заголовка чуть изящнее и компактнее */
         header h1 {
