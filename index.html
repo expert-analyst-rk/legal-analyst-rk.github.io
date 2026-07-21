@@ -5,30 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Правовой стратег | Экспертные решения в РК</title>
       <style>
-                                                              :root {
+                                                                    :root {
             --bg-space: #070d19;          
-            --bg-card: rgba(255, 255, 255, 0.02); /* Полная прозрачность и чистота */
-            --color-mint: #ffffff;        /* Кристально-белый для главного заголовка */
-            --color-purple: #00d2ff;      /* Оставляем неон только для кнопки «Разобрать мою ситуацию» */
-            --color-ochre: #ffffff;       
-            --text-muted: rgba(255, 255, 255, 0.75); /* Выдержанный матово-белый для основного текста */
-            --text-sub: rgba(255, 255, 255, 0.85);   /* Облегченный белый для подзаголовка */
+            --bg-card: rgba(255, 255, 255, 0.02); 
+            --color-mint: #ffffff;        /* Кристально-белый для заголовка */
+            --color-purple: #caa96a;      /* Фирменное золото взамен неона */
+            --color-ochre: #caa96a;       
+            --text-muted: rgba(255, 255, 255, 0.75); /* Матовый белый для текстов */
+            --text-sub: rgba(255, 255, 255, 0.85);   /* Облегченный белый для субтитров */
             
-            --radius-terminal: 24px;      
-            --glow-orange: 0 0 30px rgba(0, 210, 255, 0.3); 
-            --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --radius-terminal: 4px;       /* Премиальная строгая геометрия углов */
+            --glow-orange: 0 4px 15px rgba(202, 169, 106, 0.15); 
+            --transition-smooth: all 0.3s ease;
         }
 
         body { 
             font-family: 'Lora', 'Georgia', serif; 
             background-color: var(--bg-space); 
-            background-image: linear-gradient(rgba(11, 19, 41, 0.25), rgba(11, 19, 41, 0.5)), url('bg-space.png');
+            background-image: linear-gradient(rgba(11, 19, 41, 0.35), rgba(11, 19, 41, 0.6)), url('bg-space.png');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
-            color: var(--text-muted); 
-            margin: 0; padding: 0; line-height: 1.8; letter-spacing: 0.5px; 
-            -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; 
+
         }
 
               /* 1. Делаем шрифт заголовка чуть изящнее и компактнее */
@@ -41,46 +39,65 @@
             text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
         }
 
-        /* 2. Полностью убираем неоново-голубой цвет с главной кнопки */
-        .btn {
-            display: inline-block;
-            background: transparent; /* Делаем кнопку прозрачной и благородной */
-            color: #caa96a !important; /* Текст заливаем вашим фирменными золотом */
-            border: 1px solid rgba(202, 169, 106, 0.6); /* Тонкая золотая рамка */
-            padding: 16px 35px;
-            font-family: 'Lora', serif;
-            font-size: 0.95rem;
-            letter-spacing: 2px;
-            text-decoration: none;
-            border-radius: 4px; /* Строгая элегантная геометрия вместо круглых краев */
-            box-shadow: none; /* Убираем неоновое свечение */
-            transition: all 0.3s ease;
-        }
+        /* 2. Полностью убираем неоново-голубой цвет с главной кнопки и делаем её золотой */
+.btn, header .btn, a.btn {
+    display: inline-block !important;
+    background: transparent !important;
+    color: #caa96a !important;
+    border: 1px solid rgba(202, 169, 106, 0.6) !important;
+    padding: 15px 35px !important;
+    font-family: 'Lora', serif !important;
+    font-size: 0.95rem !important;
+    letter-spacing: 2px !important;
+    text-decoration: none !important;
+    border-radius: var(--radius-terminal) !important;
+    box-shadow: none !important;
+    transition: var(--transition-smooth) !important;
+}
 
-        /* Эффект при наведении на кнопку (мягкое наполнение золотом) */
-        .btn:hover {
-            background: #caa96a;
-            color: #070d19 !important;
-            box-shadow: 0 4px 20px rgba(202, 169, 106, 0.2);
-            transform: translateY(-2px);
-        }
+.btn:hover, header .btn:hover {
+    background: #caa96a !important;
+    color: #070d19 !important;
+    box-shadow: var(--glow-orange) !important;
+    transform: translateY(-2px);
+}
 
-        /* 3. Возвращаем высокую контрастность и белизну кнопкам переключения языков */
-        .lang-switcher a {
-            color: rgba(255, 255, 255, 0.6) !important;
-            text-decoration: none;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-        }
+/* 3. Окрашиваем подзаголовок в благородный матово-белый цвет */
+header .subtitle, .subtitle span, [lang="ru"] .subtitle {
+    color: var(--text-sub) !important;
+    font-size: 1.2rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    text-transform: none !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+}
 
-        /* Стиль для выбранного языка (RU) — мягкая золотая матовая подсветка */
-        .lang-switcher a.active, .lang-switcher a[style*="background"] {
-            background: #caa96a !important;
-            color: #070d19 !important;
-            border-radius: 4px;
-            font-weight: bold;
-        }
+/* 4. Возвращаем контрастность и видимость кнопкам переключения языков */
+.lang-switcher {
+    background: rgba(7, 13, 25, 0.6) !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.lang-switcher a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-family: 'Lora', serif !important;
+    font-size: 0.9rem !important;
+    padding: 4px 10px !important;
+    text-decoration: none !important;
+    transition: var(--transition-smooth) !important;
+}
+
+/* Подсветка активной кнопки RU */
+.lang-switcher a[style*="background"], .lang-switcher a.active {
+    background: #caa96a !important;
+    color: #070d19 !important;
+    border-radius: 2px !important;
+    font-weight: bold !important;
+}
+</style>
+
 
         }
         .lang-btn:hover { border-color: var(--color-purple); color: var(--color-purple); box-shadow: 0 0 10px rgba(0, 210, 255, 0.2); }
