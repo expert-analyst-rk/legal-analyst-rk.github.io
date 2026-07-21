@@ -5,33 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Правовой стратег | Экспертные решения в РК</title>
       <style>
-                                                       :root {
+                                                              :root {
             --bg-space: #070d19;          
-            --bg-card: rgba(15, 23, 42, 0.35); 
-            --color-mint: #ffffff;        /* Кристально-белый для текста */
-            --color-purple: #00d2ff;      /* Сохраняем ваш неоново-голубой для кнопок */
+            --bg-card: rgba(255, 255, 255, 0.02); /* Полная прозрачность и чистота */
+            --color-mint: #ffffff;        /* Кристально-белый для главного заголовка */
+            --color-purple: #00d2ff;      /* Оставляем неон только для кнопки «Разобрать мою ситуацию» */
             --color-ochre: #ffffff;       
-            --text-muted: rgba(255, 255, 255, 0.85); /* Мягкий белый для идеального контраста */
+            --text-muted: rgba(255, 255, 255, 0.75); /* Выдержанный матово-белый для основного текста */
+            --text-sub: rgba(255, 255, 255, 0.85);   /* Облегченный белый для подзаголовка */
             
             --radius-terminal: 24px;      
-            --glow-orange: 0 0 30px rgba(0, 210, 255, 0.4); 
+            --glow-orange: 0 0 30px rgba(0, 210, 255, 0.3); 
             --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         body { 
-            font-family: 'Lora', 'Georgia', 'Times New Roman', serif; 
+            font-family: 'Lora', 'Georgia', serif; 
             background-color: var(--bg-space); 
-            /* Очень легкое наложение цвета (0.2 и 0.45) — фон будет максимально прозрачным и сочным */
-            background-image: linear-gradient(rgba(11, 19, 41, 0.2), rgba(11, 19, 41, 0.45)), url('bg-space.png');
+            background-image: linear-gradient(rgba(11, 19, 41, 0.25), rgba(11, 19, 41, 0.5)), url('bg-space.png');
             background-attachment: fixed;
             background-size: cover;
             background-position: center;
-            color: var(--color-mint); 
-            margin: 0; padding: 0; 
-            line-height: 1.8; /* Увеличили интервал для воздуха */
-            letter-spacing: 0.8px; /* Изящное расстояние между буквами */
+            color: var(--text-muted); 
+            margin: 0; padding: 0; line-height: 1.8; letter-spacing: 0.5px; 
             -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; 
         }
+
+        /* Кристально-белый, доминантный главный заголовок */
+        header h1 {
+            color: var(--color-mint);
+            font-size: 3rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Выдержанный, аккуратный подзаголовок в обычном регистре */
+        header .subtitle {
+            color: var(--text-sub);
+            font-size: 1.25rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 35px;
+            text-transform: none; /* Убираем Caps Lock для утонченности */
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Безупречный журнальный блок основного текста */
+        header p {
+            max-width: 760px;
+            margin: 0 auto 40px auto !important;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            text-align: center;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
 
         /* Ограничиваем ширину текста, чтобы он не растягивался на весь экран и читался как в дорогом журнале */
         header p, .text-block {
@@ -328,39 +358,26 @@
         }
     </style>
 
-    </style>
-</head>
-<body>
-<div class="container">
-    <!-- Объединенная панель: Логотип слева, языки справа -->
-    <div class="nav-bar">
-        <div class="logo-box">
-            <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
-                <path d="M50 2 L98 50 L50 98 L2 50 Z" stroke="url(#retroGlow)" stroke-width="2" stroke-linejoin="round"/>
-                <text x="30" y="58" font-family="'Courier New', monospace" font-size="30" fill="url(#retroGlow)" font-weight="700">L</text>
-                <text x="52" y="66" font-family="'Courier New', monospace" font-size="30" fill="var(--color-purple)" font-weight="700">S</text>
+       <header style="text-align: center; padding-top: 60px;">
+        <div class="logo-box" style="margin-bottom: 30px;">
+            <!-- Ваш SVG-логотип остается без изменений -->
+            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
+                <path d="M50 2 L98 50 L50 98 L2 50 Z" stroke="url(#goldGlaze)" stroke-width="1.5" stroke-linejoin="round"/>
+                <text x="32" y="58" font-family="'Lora', serif" font-size="32" fill="url(#goldGlaze)" font-weight="400">L</text>
+                <text x="52" y="66" font-family="'Lora', serif" font-size="32" fill="url(#goldGlaze)" font-style="italic" font-weight="400">S</text>
                 <defs>
-                    <linearGradient id="retroGlow" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stop-color="#fbbf24"/> 
-                        <stop offset="100%" stop-color="#f97316"/>
+                    <linearGradient id="goldGlaze" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                        <stop offset="0%" stop-color="#caa96a"/> <stop offset="50%" stop-color="#99793d"/> <stop offset="100%" stop-color="#e8cf9b"/>
                     </linearGradient>
                 </defs>
             </svg>
         </div>
-        <div class="lang-switcher">
-            <a href="index-kz.html" class="lang-btn">KZ</a>
-            <a href="index.html" class="lang-btn active">RU</a>
-            <a href="index-en.html" class="lang-btn">EN</a>
-        </div>
-    </div>
-
-    <!-- Чистая заставка проекта без лишних элементов -->
-    <header>
-        <h1>Правовой стратег</h1>
-              <div class="subtitle" style="color: rgba(255, 255, 255, 0.75) !important;">Разобраться в законе. Защитить свои права. Действовать уверенно.</div>
-
+        
+        <h1>ПРАВОВОЙ СТРАТЕГ</h1>
+        <div class="subtitle">Разобраться в законе. Защитить свои права. Действовать уверенно.</div>
         <p>Если вы столкнулись с долгами, исполнительным производством, судебным спором или другой сложной правовой ситуацией, важно не паниковать, а понять свои законные возможности. Здесь вы получите профессиональный анализ ситуации, помощь в подготовке документов и понятный алгоритм дальнейших действий. Строго в рамках законодательства Республики Казахстан.</p>
-        <a href="https://wa.me" class="btn" target="_blank">Разобрать мою ситуацию</a>
+        
+        <a href="https://wa.me" class="btn" target="_blank">РАЗОБРАТЬ МОЮ СИТУАЦИЮ</a>
     </header>
 
         </header>
