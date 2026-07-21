@@ -56,25 +56,73 @@
 
         /* Заставка (Hero-блок) с проявлением вашего ИИ-фото */
                /* Полная прозрачность карточки шапки, чтобы проявить красоту вашей ИИ-картинки */
+               /* Оптимизированная заставка (Hero-блок) без лишних рамок */
         header { 
-            text-align: center; margin-bottom: 60px; padding: 60px 30px; 
+            text-align: center; 
+            margin-bottom: 50px; 
+            padding: 40px 20px; 
             background: transparent;
-            border: none; box-shadow: none;
+            border: none; 
+            box-shadow: none;
         }
 
-        h1 { font-size: 3.2rem; font-weight: 700; margin: 0 0 15px 0; color: #ffffff; letter-spacing: 4px; text-transform: uppercase; text-shadow: 0 0 20px rgba(0, 210, 255, 0.6); }
-        .subtitle { font-size: 1.1rem; color: #00d2ff; margin-bottom: 35px; letter-spacing: 1px; text-transform: uppercase; font-weight: bold; text-shadow: 0 0 10px rgba(0, 210, 255, 0.4); }
-        header p { color: #ffffff; font-size: 1.1rem; max-width: 750px; margin: 0 auto 40px auto; text-align: justify; font-weight: 500; line-height: 1.8; text-shadow: 0 2px 4px rgba(0,0,0,0.8); }
+        /* Уменьшили заголовок для баланса и сделали его чисто белым */
+        h1 { 
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            margin: 0 0 20px 0; 
+            color: #ffffff; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5); 
+        }
 
-        /* Яркая контрастная неоновая кнопка, которая теперь будет отлично видна */
+        /* Приглушенный белый цвет подзаголовка для мягкого контраста */
+        .subtitle { 
+            font-size: 1rem; 
+            color: rgba(255, 255, 255, 0.75); 
+            margin-bottom: 35px; 
+            letter-spacing: 1.5px; 
+            text-transform: uppercase; 
+            font-weight: bold; 
+        }
+
+        /* Высокочитаемый и приятный взору основной текст */
+        header p { 
+            color: #ffffff; 
+            font-size: 1.05rem; 
+            max-width: 720px; 
+            margin: 0 auto 40px auto; 
+            text-align: justify; 
+            font-weight: 500; 
+            line-height: 1.75; 
+            letter-spacing: 0.3px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6); 
+        }
+
+        /* Акцентная неоново-голубая кнопка */
         .btn { 
-            display: inline-block; background: #00d2ff; color: #0b1329; padding: 18px 45px; border: none;
-            border-radius: var(--radius-terminal); text-decoration: none; font-weight: bold; letter-spacing: 2px; text-transform: uppercase;
-            box-shadow: 0 0 25px rgba(0, 210, 255, 0.5); transition: var(--transition-smooth); text-align: center; font-size: 0.95rem; 
+            display: inline-block; 
+            background: #00d2ff; 
+            color: #0b1329; 
+            padding: 16px 42px; 
+            border: none;
+            border-radius: var(--radius-terminal); 
+            text-decoration: none; 
+            font-weight: bold; 
+            letter-spacing: 2px; 
+            text-transform: uppercase;
+            box-shadow: 0 4px 20px rgba(0, 210, 255, 0.4); 
+            transition: var(--transition-smooth); 
+            text-align: center; 
+            font-size: 0.9rem; 
         }
-        .btn:hover { background: #ffffff; box-shadow: 0 0 35px rgba(255, 255, 255, 0.8); transform: translateY(-3px); }
+        .btn:hover { 
+            background: #ffffff; 
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.8); 
+            transform: translateY(-2px); 
+        }
 
-        }
 
         .subtitle { 
             font-size: 1.1rem; 
