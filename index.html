@@ -120,37 +120,22 @@
 
         }
 
-        .docs-list { 
-            margin: 15px 0 0 0; 
-            padding-left: 20px; 
-            color: var(--color-purple); 
-            font-size: 0.9rem; 
-            list-style-type: '○ '; 
-        }
+              .docs-list { margin: 15px 0 0 0; padding-left: 20px; color: #00d2ff; font-size: 0.9rem; list-style-type: '○ '; }
+        .docs-list li { margin-bottom: 8px; color: #cbd5e1; }
 
-        .docs-list li { margin-bottom: 8px; color: var(--text-muted); }
-
+        /* Пошаговый алгоритм и отзывы в стиле Weblium */
         .timeline { display: flex; flex-direction: column; gap: 20px; }
+        .step-box { background-color: #1a2232; padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); border-left: 5px solid #00d2ff; backdrop-filter: blur(10px); }
+        .step-num { font-size: 0.85rem; color: #00d2ff; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px; font-weight: bold; }
+        .step-text { color: #ffffff; font-size: 1rem; margin: 0; }
 
-        .step-box { 
-            background-color: var(--bg-card); 
-            padding: 30px; 
-            border-radius: var(--radius-terminal); 
-            border: 1px solid rgba(251, 191, 36, 0.08);
-            border-left: 5px solid var(--color-purple); 
-            backdrop-filter: blur(12px); 
-        }
+        /* Сетка принципов в глубоких приглушенных тонах */
+        .grid-principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .principle-box { background-color: #1a2232; padding: 25px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); transition: var(--transition-smooth); }
+        .principle-box:hover { border-color: rgba(0, 210, 255, 0.2); }
+        .principle-title { color: #ffffff; font-weight: 700; margin-bottom: 8px; font-size: 1.1rem; letter-spacing: 0.5px; }
+        .principle-desc { color: #cbd5e1; font-size: 0.95rem; margin: 0; }
 
-        .step-num { 
-            font-size: 0.85rem; 
-            color: var(--color-purple); 
-            text-transform: uppercase; 
-            letter-spacing: 2px; 
-            margin-bottom: 6px; 
-            font-weight: bold; 
-        }
-
-        .step-text { color: var(--color-mint); font-size: 1rem; margin: 0; }
 
         .grid-principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 
