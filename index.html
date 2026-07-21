@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Правовой стратег | Экспертные решения в РК</title>
       <style>
-        :root {
-            /* Теплая палитра ретрофутуризма: Weblium Blog */
-            --bg-space: #1a1512;          /* Глубокий теплый коричневый оттенок */
-            --bg-card: rgba(38, 30, 26, 0.75); /* Карточки под текстуру ретро-приборов */
-            --color-mint: #e2dcd0;        /* Мягкий пастельный цвет для основного текста */
-            --color-purple: #f97316;      /* Яркий терракотовый / оранжевый неон для акцентов */
-            --color-ochre: #fbbf24;       /* Горчично-желтый для заголовков */
-            --color-terracotta: #ef4444;  
-            --text-muted: #a7998f;        
+               :root {
+            --bg-space: #f7f4eb;          /* Мягкий светлый кремовый фон */
+            --bg-card: #ffffff;           /* Белоснежные чистые карточки */
+            --color-mint: #2b2521;        /* Глубокий темный цвет для идеального чтения текста */
+            --color-purple: #e65c00;      /* Спокойный терракотовый для акцентов */
+            --color-ochre: #b37400;       /* Благородный горчичный для заголовков */
+            --color-terracotta: #cc2424;  
+            --text-muted: #61554d;        /* Приглушенный кофейный для описаний */
             
-            --radius-terminal: 24px;      /* Максимально гладкие, округлые линии 60-х годов */
-            --glow-orange: 0 0 20px rgba(249, 115, 22, 0.3);
+            --radius-terminal: 24px;      
+            --glow-orange: 0 10px 30px rgba(230, 92, 0, 0.08); /* Мягкая, едва заметная тень вместо неонового свечения */
             --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
         }
 
         body { 
@@ -140,15 +141,16 @@
             text-align: center;
         }
 
-        /* Линии космических станций */
-        h2::after { 
-            content: ''; 
-            display: block; 
-            width: 60px; 
-            height: 3px; 
-            background: var(--color-purple); 
-            margin: 15px auto 0 auto;
-            border-radius: 2px;
+               h2 { 
+            font-size: 1.6rem; 
+            font-weight: 700; 
+            color: var(--color-ochre); 
+            margin-bottom: 30px; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            text-align: center; 
+        }
+
         }
 
         .text-block { 
