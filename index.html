@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Правовой стратег | Экспертные решения в РК</title>
       <style>
-               :root {
-            --bg-space: #f7f4eb;          /* Мягкий светлый кремовый фон */
-            --bg-card: #ffffff;           /* Белоснежные чистые карточки */
-            --color-mint: #2b2521;        /* Глубокий темный цвет для идеального чтения текста */
-            --color-purple: #e65c00;      /* Спокойный терракотовый для акцентов */
-            --color-ochre: #b37400;       /* Благородный горчичный для заголовков */
-            --color-terracotta: #cc2424;  
-            --text-muted: #61554d;        /* Приглушенный кофейный для описаний */
+                          :root {
+            --bg-space: #0f172a;          
+            --bg-card: rgba(30, 41, 59, 0.75); 
+            --color-mint: #f1f5f9;        
+            --color-purple: #38bdf8;      
+            --color-ochre: #38bdf8;       
+            --color-terracotta: #ef4444;  
+            --text-muted: #94a3b8;        
             
             --radius-terminal: 24px;      
-            --glow-orange: 0 10px 30px rgba(230, 92, 0, 0.08); /* Мягкая, едва заметная тень вместо неонового свечения */
+            --glow-orange: 0 10px 30px rgba(56, 189, 248, 0.15); 
             --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
         }
 
         body { 
             font-family: 'Courier New', Courier, monospace; 
             background-color: var(--bg-space); 
+            background-image: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.85)), url('bg-space.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
             color: var(--color-mint); 
-            margin: 0; 
-            padding: 0; 
-            line-height: 1.7; 
-            letter-spacing: 0.5px; 
-            -webkit-text-size-adjust: 100%; 
-            position: relative; 
-            overflow-x: hidden; 
+            margin: 0; padding: 0; line-height: 1.7; letter-spacing: 0.5px; 
+            -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; 
+        }
+
+
         }
 
         /* Дизайн заставки: Эффект заходящего солнца и мягких ретро-волн */
@@ -66,7 +66,10 @@
             text-align: center; 
             margin-bottom: 60px; 
             padding: 40px 30px; 
-            background: var(--bg-card);
+                       background-image: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.95)), url('bg-header.png');
+            background-size: cover;
+            background-position: center;
+
             border: 2px solid rgba(251, 191, 36, 0.15);
             border-radius: var(--radius-terminal);
             box-shadow: var(--glow-orange);
@@ -275,7 +278,10 @@
 
         .contacts-block { 
             text-align: center; 
-            background-color: var(--bg-card); 
+            background-image: linear-gradient(rgba(30, 41, 59, 0.85), rgba(30, 41, 59, 0.95)), url('bg-contacts.png');
+            background-size: cover;
+            background-position: center;
+
             padding: 45px 25px; 
             border-radius: var(--radius-terminal); 
             border: 2px solid var(--color-purple); 
