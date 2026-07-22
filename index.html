@@ -153,13 +153,23 @@ header p, .text-block, section p {
     text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9) !important;
 }
 
+/* Идеальная симметричная сетка Bento Grid по 3 карточки в ряду */
 .card-grid {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)) !important;
-    gap: 24px !important; 
+    grid-template-columns: repeat(3, minmax(280px, 1fr)) !important; /* Строго 3 колонки */
+    gap: 30px !important; /* Увеличили разделение между плитками для воздуха */
     margin-top: 40px !important;
-    align-items: stretch !important; /* Карточки будут строго одной высоты в ряду */
+    margin-bottom: 50px !important; /* Отступ снизу, чтобы секции не слипались */
+    align-items: stretch !important; 
 }
+
+/* Адаптивность для мобильных телефонов и планшетов */
+@media (max-width: 992px) {
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    }
+}
+
 
         }
 
