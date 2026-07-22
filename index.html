@@ -30,23 +30,38 @@
             -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; 
         }
 
+              /* 1. Создаем премиальную верхнюю панель: логотип слева, языки справа */
+        .nav-panel {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            max-width: 1200px !important;
+            margin: 0 auto !important;
+            padding: 20px 40px !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
         header { 
             text-align: center; 
             margin-bottom: 50px; 
-            padding: 40px 20px; 
+            padding: 10px 20px 40px 20px !important; 
             background: transparent;
             border: none; 
             box-shadow: none;
         }
 
+        /* 2. Уменьшаем заголовок, делая его утонченным и немассивным */
         header h1 {
             color: var(--color-mint) !important;
-            font-size: 2.4rem !important;
-            font-weight: 400;
-            letter-spacing: 3px;
-            margin-bottom: 25px;
+            font-size: 1.9rem !important; /* Уменьшили для идеального баланса */
+            font-weight: 400 !important;
+            letter-spacing: 4px !important; /* Увеличили шаг букв для элитарности */
+            margin: 30px 0 20px 0 !important;
             text-transform: uppercase;
             text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+        }
+
         }
 
         header .subtitle, .subtitle span { 
@@ -334,11 +349,10 @@
 </style>
     </head>
 <body>
-              <header style="text-align: center; padding-top: 60px;">
-        <div class="logo-box" style="margin-bottom: 30px; justify-content: center;">
-            <!-- Полностью исправленный SVG-логотип: теперь золото подгружается на 100% -->
-            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
-
+    <!-- Новая верхняя панель: Логотип ушел влево, языки ушли вправо -->
+    <div class="nav-panel">
+        <div class="logo-box" style="margin: 0;">
+            <svg width="55" height="55" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
                 <path d="M50 2 L98 50 L50 98 L2 50 Z" stroke="url(#goldGlaze)" stroke-width="1.5" stroke-linejoin="round"/>
                 <text x="32" y="58" font-family="'Lora', serif" font-size="32" fill="url(#goldGlaze)" font-weight="400">L</text>
                 <text x="52" y="66" font-family="'Lora', serif" font-size="32" fill="url(#goldGlaze)" font-style="italic" font-weight="400">S</text>
@@ -349,6 +363,16 @@
                 </defs>
             </svg>
         </div>
+        
+        <div class="lang-switcher" style="margin: 0;">
+            <a href="index-kz.html" class="lang-btn">KZ</a>
+            <a href="index.html" class="lang-btn active">RU</a>
+            <a href="index-en.html" class="lang-btn">EN</a>
+        </div>
+    </div>
+
+    <header style="text-align: center;">
+
 
         
         <h1>ПРАВОВОЙ СТРАТЕГ</h1>
