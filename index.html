@@ -140,24 +140,27 @@ header p, .text-block, section p {
 
         section { margin-bottom: 60px; }
         
-        h2 { 
-            font-size: 1.8rem !important; 
-            font-family: 'Lora', serif !important;
-            font-weight: 400 !important; 
-            color: #ffffff !important; 
-            margin-bottom: 30px !important; 
-            letter-spacing: 2px !important; 
-            text-transform: uppercase; 
-            text-align: center !important; 
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-        }
-        
-        .card-grid {
-            display: grid !important;
-            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)) !important;
-            gap: 24px !important; 
-            margin-top: 40px !important;
-            align-items: stretch !important; 
+      h2 { 
+    font-size: 1.8rem !important; 
+    font-family: 'Lora', serif !important;
+    font-weight: 400 !important; 
+    color: #caa96a !important; /* Перевели в фирменное золото */
+    margin-bottom: 35px !important; 
+    letter-spacing: 3px !important; 
+    text-transform: uppercase; 
+    text-align: center !important; 
+    /* Усилили тень для безупречного контраста на фоне здания */
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.9) !important;
+}
+
+.card-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)) !important;
+    gap: 24px !important; 
+    margin-top: 40px !important;
+    align-items: stretch !important; /* Карточки будут строго одной высоты в ряду */
+}
+
         }
 
         .card {
