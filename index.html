@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Правовой стратег | Экспертные решения в РК</title>
-    <style>
-        :root {
+    <style>        :root {
             --bg-space: #070d19;          
             --bg-card: rgba(255, 255, 255, 0.02); 
             --color-mint: #ffffff;        
@@ -13,7 +12,7 @@
             --color-ochre: #caa96a;       
             --text-muted: rgba(255, 255, 255, 0.75); 
             --text-sub: rgba(255, 255, 255, 0.85);   
-            --radius-terminal: 8px;       
+            --radius-terminal: 4px;       
             --glow-orange: 0 4px 15px rgba(202, 169, 106, 0.15); 
             --transition-smooth: all 0.3s ease;
         }
@@ -30,7 +29,6 @@
             -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; 
         }
 
-              /* 1. Создаем премиальную верхнюю панель: логотип слева, языки справа */
         .nav-panel {
             display: flex !important;
             justify-content: space-between !important;
@@ -51,22 +49,21 @@
             box-shadow: none;
         }
 
-        /* 2. Уменьшаем заголовок, делая его утонченным и немассивным */
+        /* Изящный литературный заголовок */
         header h1 {
             color: var(--color-mint) !important;
-            font-size: 1.9rem !important; /* Уменьшили для идеального баланса */
+            font-family: 'Lora', 'Georgia', serif !important;
+            font-size: 2.1rem !important; 
             font-weight: 400 !important;
-            letter-spacing: 4px !important; /* Увеличили шаг букв для элитарности */
+            letter-spacing: 4px !important; 
             margin: 30px 0 20px 0 !important;
             text-transform: uppercase;
             text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
         }
 
-        }
-
-        header .subtitle, .subtitle span { 
+        header .subtitle { 
             color: var(--text-sub) !important;
-            font-size: 1.2rem !important;
+            font-size: 1.1rem !important;
             font-weight: 300 !important;
             margin-bottom: 35px; 
             letter-spacing: 1.5px; 
@@ -74,15 +71,16 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.6) !important; 
         }
 
+        /* Выравнивание текста по центру для устранения дыр и хаоса */
         header p, .text-block, section p { 
-            color: #ffffff !important; 
-            font-size: 1.05rem; 
-            max-width: 720px; 
+            color: rgba(255, 255, 255, 0.85) !important; 
+            font-size: 1.1rem !important; 
+            max-width: 760px !important; 
             margin: 0 auto 40px auto !important; 
-            text-align: justify; 
-            font-weight: 500; 
-            line-height: 1.75; 
-            letter-spacing: 0.3px;
+            text-align: center !important; /* Убираем justify */
+            font-weight: 400 !important; 
+            line-height: 1.8 !important; 
+            letter-spacing: 0.5px !important;
             text-shadow: 0 2px 8px rgba(0,0,0,0.6); 
         }
 
@@ -100,7 +98,6 @@
             text-transform: uppercase;
             box-shadow: none !important; 
             transition: var(--transition-smooth) !important; 
-            text-align: center; 
         }
         
         .btn:hover, header .btn:hover { 
@@ -110,39 +107,49 @@
             transform: translateY(-2px); 
         }
 
-        .lang-switcher {
-            background: rgba(7, 13, 25, 0.6) !important;
-            padding: 6px 12px !important;
-            border-radius: 4px !important;
-            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        /* Возвращаем эталонные золотые кнопки из казахской версии сполна */
+        .lang-switcher { 
+            display: flex !important; 
+            gap: 10px !important; 
         }
 
-        .lang-switcher a {
-            color: rgba(255, 255, 255, 0.8) !important;
-            font-family: 'Lora', serif !important;
-            font-size: 0.9rem !important;
-            padding: 4px 10px !important;
+        .lang-btn { 
+            background: transparent !important; 
+            border: 1px solid rgba(202, 169, 106, 0.4) !important; 
+            color: rgba(255, 255, 255, 0.7) !important; 
+            padding: 8px 18px !important; 
+            border-radius: 4px !important; 
+            cursor: pointer !important; 
+            font-family: 'Lora', serif !important; 
+            font-size: 0.85rem !important; 
+            letter-spacing: 1px !important; 
             text-decoration: none !important;
-            transition: var(--transition-smooth) !important;
+            transition: var(--transition-smooth) !important; 
         }
 
-        .lang-switcher a[style*="background"], .lang-switcher a.active {
-            background: #caa96a !important;
-            color: #070d19 !important;
-            border-radius: 2px !important;
-            font-weight: bold !important;
+        .lang-btn:hover { 
+            border-color: #caa96a !important; 
+            color: #caa96a !important; 
+        }
+        
+        .lang-btn.active, .lang-btn[style*="background"] { 
+            background: #caa96a !important; 
+            border-color: #caa96a !important; 
+            color: #070d19 !important; 
+            font-weight: bold !important; 
         }
 
-        section { margin-bottom: 50px; }
+        section { margin-bottom: 60px; }
         
         h2 { 
-            font-size: 1.6rem; 
-            font-weight: 700; 
-            color: #ffffff; 
-            margin-bottom: 30px; 
-            letter-spacing: 2px; 
+            font-size: 1.8rem !important; 
+            font-family: 'Lora', serif !important;
+            font-weight: 400 !important; 
+            color: #ffffff !important; 
+            margin-bottom: 30px !important; 
+            letter-spacing: 2px !important; 
             text-transform: uppercase; 
-            text-align: center; 
+            text-align: center !important; 
             text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
         
@@ -177,7 +184,8 @@
 
         .card h3 {
             color: var(--color-mint) !important;
-            font-size: 1.3rem !important;
+            font-family: 'Lora', serif !important;
+            font-size: 1.25rem !important;
             font-weight: 400 !important;
             margin-top: 0 !important;
             margin-bottom: 15px !important;
@@ -250,102 +258,69 @@
             box-shadow: 0 10px 30px rgba(202, 169, 106, 0.05) !important;
         }
         
-        .principle-title { 
-            color: var(--color-mint) !important; 
-            font-family: 'Lora', serif !important; 
-            font-size: 1.25rem !important; 
-            font-weight: 400 !important; 
-            margin-bottom: 12px !important; 
-            letter-spacing: 0.5px !important;
-            text-transform: none !important; 
-        }
-        
-        .principle-desc { 
-            font-size: 0.95rem !important; 
-            color: rgba(255, 255, 255, 0.7) !important; 
-            margin: 0 !important; 
-            line-height: 1.6 !important;
-        }
+       .principle-title { 
+    color: var(--color-mint) !important; 
+    font-family: 'Lora', serif !important; 
+    font-size: 1.25rem !important; 
+    font-weight: 400 !important; 
+    margin-bottom: 12px !important; 
+    letter-spacing: 0.5px !important;
+    text-transform: none !important; 
+}
 
-        .refuse-box { 
-            max-width: 780px !important;
-            margin: 0 auto !important;
-            background: rgba(255, 74, 74, 0.03) !important;
-            border: 1px solid rgba(255, 74, 74, 0.15) !important;
-            padding: 30px !important;
-            border-radius: 6px !important;
-            backdrop-filter: blur(10px) !important;
-            -webkit-backdrop-filter: blur(10px) !important;
-            text-align: center !important;
-            color: var(--text-muted) !important;
-            font-size: 1.1rem !important;
-            line-height: 1.8 !important;
-        }
+.principle-desc { 
+    font-size: 0.95rem !important; 
+    color: rgba(255, 255, 255, 0.7) !important; 
+    margin: 0 !important; 
+    line-height: 1.6 !important;
+}
 
-        .contacts-block { 
-            text-align: center !important;
-            background: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-                    padding: 0 !important;
-    }
+/* Финальный ровный каркас для Bento-карточек услуг и опыта */
+.card-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)) !important;
+    gap: 24px !important; 
+    margin-top: 40px !important;
+    align-items: stretch !important; 
+}
 
-    /* Премиальная двухколоночная сетка для контактов и регламента */
-    .contact-buttons {
-        margin: 0;
-        max-width: 100%;
-        display: flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-        gap: 15px !important;
-    }
+.card {
+    background: rgba(11, 19, 41, 0.65) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 30px !important; 
+    border-radius: 8px !important; 
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+    text-align: left !important; 
+    height: 100% !important;
+    transition: var(--transition-smooth) !important;
+}
 
-    /* Элегантные матовые кнопки связи */
-    .contact-link { 
-        display: block !important;
-        text-align: left !important;
-        padding: 15px 20px !important;
-        border: 1px solid rgba(202, 169, 106, 0.3) !important;
-        color: #caa96a !important;
-        text-decoration: none !important;
-        border-radius: 4px !important;
-        background: rgba(11, 19, 41, 0.65) !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-        font-family: 'Lora', serif !important;
-        letter-spacing: 0.5px !important;
-        font-size: 1rem !important;
-        font-weight: normal !important;
-        text-transform: none !important;
-        transition: var(--transition-smooth) !important;
-    }
+.card:hover {
+    border-color: rgba(202, 169, 106, 0.4) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 30px rgba(202, 169, 106, 0.05) !important;
+}
 
-    .contact-link:hover { 
-        border-color: rgba(202, 169, 106, 0.6) !important;
-        background: rgba(11, 19, 41, 0.8) !important;
-        box-shadow: var(--glow-orange) !important;
-        transform: translateY(-2px);
-    }
+.card h3 {
+    color: var(--color-mint) !important;
+    font-family: 'Lora', serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 400 !important;
+    margin-top: 0 !important;
+    margin-bottom: 15px !important;
+    line-height: 1.4 !important;
+}
 
-    /* Панель навигации меню */
-    .nav-bar {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        margin-bottom: 40px !important;
-        padding: 15px 30px !important;
-        background: rgba(11, 19, 41, 0.65) !important;
-        border: 1px solid rgba(255, 255, 255, 0.08) !important;
-        border-radius: 6px !important;
-        backdrop-filter: blur(10px) !important;
-        -webkit-backdrop-filter: blur(10px) !important;
-    }
+.card p, .card li {
+    margin: 0 !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+}
 
-    .logo-box { 
-        display: flex !important;
-        align-items: center !important;
-        filter: drop-shadow(0 4px 15px rgba(202, 169, 106, 0.2)) !important;
-    }
 </style>
     </head>
 <body>
