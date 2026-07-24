@@ -29,8 +29,20 @@
             margin: 0; padding: 0; line-height: 1.8; letter-spacing: 0.5px; 
             -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; 
         }
+                /* ГЛОБАЛЬНЫЙ КРУГОВОЙ КОНТУР ДЛЯ ВСЕХ ЗАГОЛОВКОВ И ПОДЗАГОЛОВКОВ */
+        header h1, h2, .subtitle, .manifesto-text {
+            text-shadow: 1px 1px 3px #000000, -1px -1px 3px #000000, 
+                         1px -1px 3px #000000, -1px 1px 3px #000000, 
+                         0 3px 6px #000000 !important;
+        }
 
-                .nav-panel {
+        /* КОНТУР ДЛЯ ЗАГОЛОВКОВ ВНУТРИ КАРТОЧЕК */
+        .card h3, .step-num, .principle-title {
+            text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 
+                         0 2px 4px #000000 !important;
+        }
+
+         .nav-panel {
             display: flex !important;
             justify-content: space-between !important;
             align-items: center !important;
