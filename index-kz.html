@@ -261,4 +261,66 @@
             margin: 0 !important;
             text-align: left !important;
         }
+                .grid-principles { 
+            display: grid !important; 
+            grid-template-columns: repeat(3, minmax(240px, 1fr)) !important; 
+            gap: 25px !important; 
+            margin-top: 40px !important;
+        }
+
+        @media (max-width: 768px) {
+            .grid-principles {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+            }
+        }
+        
+        .principle-box { 
+            background: rgba(11, 19, 41, 0.45) !important; 
+            border: 1px solid rgba(255, 255, 255, 0.05) !important; 
+            padding: 25px !important; 
+            border-radius: 6px !important; 
+            backdrop-filter: blur(10px) !important; 
+            -webkit-backdrop-filter: blur(10px) !important;
+            transition: var(--transition-smooth) !important;
+        }
+        
+        .principle-box:hover { 
+            border-color: rgba(202, 169, 106, 0.4) !important;
+            box-shadow: 0 10px 30px rgba(202, 169, 106, 0.05) !important;
+        }
+        
+        .principle-title { 
+            color: var(--color-mint) !important; 
+            font-family: 'Lora', serif !important; 
+            font-size: 1.25rem !important; 
+            font-weight: 400 !important; 
+            margin-bottom: 12px !important; 
+            letter-spacing: 0.5px !important;
+            text-transform: none !important; 
+        }
+        
+        .principle-desc { 
+            font-size: 0.95rem !important; 
+            color: rgba(255, 255, 255, 0.7) !important; 
+            margin: 0 !important; 
+            line-height: 1.6 !important;
+        }
+
+        .contacts-block { 
+            text-align: center !important;
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            padding: 0 !important;
+        }
+
+        .contact-buttons {
+            margin: 0;
+            max-width: 100%;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            gap: 15px !important;
+        }
+
 
