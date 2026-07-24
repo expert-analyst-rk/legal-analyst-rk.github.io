@@ -1,353 +1,265 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Правовой стратег | Экспертные решения в РК</title>
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <title>Legal Strategist | Expert Legal Solutions in RK</title>
     <style>
         :root {
-            --bg-color: #120a06; --card-bg: rgba(28, 17, 10, 0.6); --text-main: #f5f2eb; --text-muted: #c5b6ac; --gold-solid: #c5a059;
-            --gold-gradient: linear-gradient(135deg, #caa96a 0%, #99793d 50%, #e8cf9b 100%);
+            --bg-space: #070d19;          
+            --bg-card: rgba(11, 19, 41, 0.7); 
+            --color-mint: #ffffff;        
+            --color-purple: #caa96a;      
+            --color-ochre: #caa96a;       
+            --text-muted: rgba(255, 255, 255, 0.85); 
+            --text-sub: rgba(255, 255, 255, 0.9);   
+            --radius-terminal: 8px;       
+            --glow-orange: 0 4px 15px rgba(202, 169, 106, 0.15); 
+            --transition-smooth: all 0.3s ease;
         }
-        body { font-family: 'Georgia', serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 0; line-height: 1.85; letter-spacing: 0.3px; -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; }
-        /* ЭФФЕКТ ЖИВОГО ТУМАННОГО ФОНА СВЕЧЕНИЯ */
-               /* ЭФФЕКТ ЖИВОГО ТУМАННОГО ФОНА СВЕЧЕНИЯ */
-        body::before, body::after { content: ''; position: fixed; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(153,121,61,0.06) 0%, rgba(0,0,0,0) 70%); z-index: -1; animation: floatGlow 25s infinite alternate ease-in-out; }
-        body::before { top: -100px; left: -100px; } body::after { bottom: -100px; right: -100px; animation-duration: 35s; animation-delay: -5s; }
-        @keyframes floatGlow { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(80px, 50px) scale(1.15); } }
 
-        .container { max-width: 820px; margin: 0 auto; padding: 60px 24px; box-sizing: border-box; position: relative; z-index: 2; }
-        header { text-align: center; margin-bottom: 50px; padding-bottom: 35px; border-bottom: 1px solid rgba(197, 160, 89, 0.12); }
-        .logo-box { margin-bottom: 20px; display: inline-block; }
-         h1 { font-family: 'Lora', serif; font-size: 2.5rem; font-weight: 400; margin: 0 0 20px 0; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: 2px; }
-        .subtitle { font-family: 'Lora', serif; font-size: 1.2rem; color: var(--gold-solid); margin-bottom: 30px; font-style: italic; letter-spacing: 0.5px; }
-        header p { color: var(--text-muted); font-size: 1.05rem; max-width: 660px; margin: 0 auto 35px auto; text-align: justify; }
-        .btn { display: inline-block; background: var(--gold-gradient); color: #120a06; padding: 15px 40px; border-radius: 4px; text-decoration: none; font-weight: bold; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(153, 121, 61, 0.25); transition: transform 0.25s, box-shadow 0.25s; text-align: center; font-size: 0.95rem; }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 25px rgba(202, 169, 106, 0.45); }
-        section { margin-bottom: 50px; }
-        h2 { font-family: 'Lora', serif; font-size: 1.65rem; font-weight: 400; color: var(--gold-solid); margin-bottom: 25px; letter-spacing: 1.5px; }
-        h2::after { content: ''; display: block; width: 35px; height: 1px; background: var(--gold-solid); margin-top: 12px; opacity: 0.4; }
-        .text-block { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 20px; text-align: justify; }
-       .card-grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 24px; 
-    margin-top: 25px; 
-    align-items: stretch; 
-}
-.card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-.card p {
-    flex-grow: 1;
-}
+        body { 
+            font-family: 'Lora', 'Georgia', serif; 
+            background-color: var(--bg-space); 
+            background-image: linear-gradient(rgba(11, 19, 41, 0.35), rgba(11, 19, 41, 0.6)), url('bg-space.png');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            color: var(--text-muted); 
+            margin: 0; padding: 0; line-height: 1.8; letter-spacing: 0.5px; 
+            -webkit-text-size-adjust: 100%; position: relative; overflow-x: hidden; 
+        }
 
-        .card { background-color: var(--card-bg); padding: 30px; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.06); box-shadow: 0 10px 30px rgba(0,0,0,0.2); backdrop-filter: blur(6px); }
-        .card h3 { font-family: 'Lora', serif; margin-top: 0; margin-bottom: 14px; font-weight: 400; font-size: 1.25rem; color: var(--text-main); border-bottom: 1px solid rgba(245, 242, 235, 0.05); padding-bottom: 10px; letter-spacing: 0.5px; }
-        .card p { color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.75; }
-        .docs-list { margin: 12px 0 0 0; padding-left: 20px; color: var(--text-muted); font-size: 0.95rem; }
-        .docs-list li { margin-bottom: 8px; }
-        .timeline { display: flex; flex-direction: column; gap: 20px; }
-        .step-box { background-color: var(--card-bg); padding: 30px; border-radius: 4px; border-left: 2px solid var(--gold-solid); backdrop-filter: blur(6px); }
-        .step-num { font-family: 'Lora', serif; font-size: 0.85rem; color: var(--gold-solid); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 6px; font-weight: bold; }
-        .step-text { color: var(--text-main); font-size: 1.05rem; margin: 0; }
-        .grid-principles { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-        .principle-box { background-color: var(--card-bg); padding: 25px; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.03); backdrop-filter: blur(6px); }
-        .principle-title { font-family: 'Lora', serif; color: var(--gold-solid); font-weight: 400; margin-bottom: 8px; font-size: 1.15rem; letter-spacing: 0.5px; }
-        .principle-desc { color: var(--text-muted); font-size: 0.95rem; margin: 0; }
-        .refuse-box { background-color: rgba(197, 160, 89, 0.01); border: 1px dashed rgba(197, 160, 89, 0.2); padding: 30px; border-radius: 4px; color: var(--text-muted); font-style: italic; font-size: 1.05rem; text-align: center; }
-        .manifesto-text { font-style: italic; text-align: center; color: var(--gold-solid); font-size: 1.1rem; line-height: 1.9; max-width: 700px; margin: 35px auto 0 auto; }
-        .contacts-block { text-align: center; background-color: var(--card-bg); padding: 45px 25px; border-radius: 4px; border: 1px solid rgba(197, 160, 89, 0.12); box-sizing: border-box; box-shadow: 0 15px 40px rgba(0,0,0,0.3); backdrop-filter: blur(6px); }
-        .contacts-block h2 { font-size: 1.65rem; letter-spacing: 1.5px; }
-        .contacts-block h2::after { margin: 12px auto 0 auto; }
-        .contact-buttons { display: flex; flex-direction: column; gap: 16px; max-width: 350px; margin: 30px auto 0 auto; }
-        .contact-link { display: block; border: 1px solid var(--gold-solid); color: var(--text-main); padding: 14px; border-radius: 4px; text-decoration: none; font-size: 1.05rem; transition: background 0.3s, color 0.3s; background: rgba(197, 160, 89, 0.01); letter-spacing: 0.5px; }
-        .contact-link:hover { background: var(--gold-gradient); color: #120a06; font-weight: bold; border-color: #caa96a; }
-        footer { text-align: center; margin-top: 60px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid rgba(245, 242, 235, 0.04); padding-top: 30px; }
-           /* Панель переключателя языков KZ/RU/EN */
+        /* GLOBAL OUTLINE FOR SHARP TEXT READABILITY */
+        header h1, section h2, h2, .subtitle, header .subtitle, header .subtitle div, .manifesto-text, [class*="manifesto"], [style*="italic"] {
+            text-shadow: 1px 1px 3px #000000, -1px -1px 3px #000000, 
+                         1px -1px 3px #000000, -1px 1px 3px #000000, 
+                         0 3px 6px #000000 !important;
+        }
+
+        /* OUTLINE FOR CARDS AND BUTTONS */
+        .card h3, h3, .step-num, .principle-title, .logo-box text, .btn, header .btn, a.btn {
+            text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 
+                         1px 1px 3px #000000, -1px 1px 3px #000000,
+                         0 2px 4px #000000 !important;
+        }
+
+        .nav-panel {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            max-width: 100% !important; 
+            margin: 0 auto !important;
+            padding: 20px 40px !important; 
+            width: 100% !important;
+            box-sizing: border-box !important;
+        }
+
+        header { 
+            text-align: center; 
+            margin-bottom: 50px; 
+            padding: 10px 20px 40px 20px !important; 
+            background: transparent;
+            border: none; 
+            box-shadow: none;
+        }
+
+        header h1 {
+            color: #caa96a !important;
+            font-family: 'Lora', 'Georgia', serif !important;
+            font-size: 2.1rem !important; 
+            font-weight: 400 !important;
+            letter-spacing: 4px !important; 
+            margin: 30px 0 20px 0 !important;
+            text-transform: uppercase;
+        }
+
+        header .subtitle { 
+            color: var(--text-sub) !important;
+            font-size: 1.1rem !important;
+            font-weight: 300 !important;
+            margin-bottom: 35px; 
+            letter-spacing: 1.5px; 
+            text-transform: uppercase; 
+        }
+
+        header p, .text-block, section p { 
+            color: #ffffff !important; 
+            font-size: 1.15rem !important; 
+            max-width: 760px !important; 
+            margin: 0 auto 20px auto !important; 
+            text-align: center !important; 
+            font-weight: 500 !important; 
+            line-height: 1.8 !important; 
+            letter-spacing: 0.5px !important;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95), 0 4px 25px rgba(0, 0, 0, 0.95) !important; 
+        }
+
+        .btn, header .btn, a.btn { 
+            display: inline-block !important; 
+            background: rgba(7, 13, 25, 0.4) !important; 
+            color: #caa96a !important; 
+            padding: 16px 38px !important; 
+            border: 1.5px solid #caa96a !important;
+            border-radius: var(--radius-terminal) !important; 
+            text-decoration: none !important; 
+            font-family: 'Lora', serif !important;
+            font-size: 0.95rem !important;
+            font-weight: bold !important;
+            letter-spacing: 2px !important; 
+            text-transform: uppercase;
+            box-shadow: none !important; 
+            transition: var(--transition-smooth) !important; 
+            text-align: center; 
+        }
+        
+        .btn:hover, header .btn:hover { 
+            background: #caa96a !important; 
+            color: #070d19 !important;
+            box-shadow: var(--glow-orange) !important; 
+            transform: translateY(-2px); 
+        }
+
         .lang-switcher { 
-            display: flex; 
-            justify-content: center; 
-            gap: 12px; 
-            margin-bottom: 30px; 
-            padding-bottom: 10px;
+            display: flex !important; 
+            gap: 10px !important; 
         }
+
         .lang-btn { 
-            background: rgba(28, 17, 10, 0.6); 
-            border: 1px solid var(--gold-solid); 
-            color: var(--text-main); 
-            padding: 8px 20px; 
-            border-radius: 4px; 
-            cursor: pointer; 
-            font-family: 'Lora', serif; 
-            font-size: 0.9rem; 
-            letter-spacing: 1px;
-            transition: all 0.3s ease; 
-        }
-        .lang-btn.active { 
-            background: var(--gold-gradient); 
-            color: #120a06; 
-            font-weight: bold; 
-            box-shadow: 0 2px 10px rgba(153, 121, 61, 0.3);
+            background: rgba(11, 19, 41, 0.4) !important; 
+            border: 1px solid rgba(202, 169, 106, 0.4) !important; 
+            color: rgba(255, 255, 255, 0.8) !important; 
+            padding: 8px 18px !important; 
+            border-radius: 4px !important; 
+            cursor: pointer !important; 
+            font-family: 'Lora', serif !important; 
+            font-size: 0.85rem !important; 
+            letter-spacing: 1px !important; 
+            text-decoration: none !important;
+            backdrop-filter: blur(5px) !important;
+            -webkit-backdrop-filter: blur(5px) !important;
+            transition: all 0.3s ease !important; 
         }
 
-    </style>
-</head>
-<body>
-<div class="container">
-   <div class="lang-switcher">
-    <a href="index-kz.html" class="lang-btn">KZ</a>
-    <a href="index.html" class="lang-btn">RU</a>
-    <a href="index-en.html" class="lang-btn" style="background: var(--gold-solid); color: #000;">EN</a>
-</div>
-
-    <header>
-        <div class="logo-box">
-            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://w3.org">
-                <path d="M50 2 L98 50 L50 98 L2 50 Z" stroke="url(#goldGlaze)" stroke-width="1.5" stroke-linejoin="round"/>
-                <text x="32" y="58" font-family="'Lora', serif" font-size="32" fill="url(#goldGlaze)" font-weight="400">L</text>
-                <text x="52" y="66" font-family="'Lora', serif" font-size="32" fill="url(#goldGlaze)" font-style="italic" font-weight="400">S</text>
-                <defs>
-                    <linearGradient id="goldGlaze" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
-                        <stop offset="0%" stop-color="#caa96a"/> <stop offset="50%" stop-color="#99793d"/> <stop offset="100%" stop-color="#e8cf9b"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </div>
+        .lang-btn:hover { 
+            border-color: #caa96a !important; 
+            color: #caa96a !important; 
+            background: rgba(11, 19, 41, 0.7) !important;
+        }
         
-        <h1>Legal Strategist</h1>
-        <div class="subtitle">Understand the law. Protect your rights. Act with confidence.</div>
-        <p>If you are facing debts, enforcement proceedings, a legal dispute, or any other complex legal situation, it is crucial not to panic but to understand your legal options. Here you will receive a professional analysis of your situation, assistance in preparing documents, and a clear algorithm for further actions. Strictly within the framework of the legislation of the Republic of Kazakhstan.</p>
-        <a href="https://whatsapp.com" class="btn" target="_blank">Analyze my situation</a>
-    </header>
+        .lang-btn.active, .lang-switcher a.active { 
+            background: #caa96a !important; 
+            border-color: #caa96a !important; 
+            color: #070d19 !important; 
+            font-weight: bold !important; 
+            box-shadow: 0 4px 15px rgba(202, 169, 106, 0.3) !important;
+        }
 
-
-   <section>
-        <h2>How "Legal Strategist" Can Help You</h2>
-        <div class="text-block" style="font-style: italic; margin-bottom: 25px;">We do not offer universal solutions. Each situation requires careful study, analysis, and an individual approach.</div>
-        <div class="text-block">If you are facing one of the following situations, we are ready to help you understand the possible courses of action and prepare the necessary documents.</div>
-        <div class="card-grid">
-            <div class="card">
-                <h3>Judicial Bankruptcy of Individuals</h3>
-                <p>We will conduct a comprehensive legal analysis of your situation for compliance with the criteria and meticulously prepare the necessary documents.</p>
-            </div>
-            <div class="card">
-                <h3>Enforcement Proceedings</h3>
-                <p>We will clarify your real rights within the framework of enforcement proceedings and promptly prepare procedural documents.</p>
-            </div>
-            <div class="card">
-                <h3>Loans, Microloans, and Debt</h3>
-                <p>We will analyze the current debt situation and review possible legal solutions in detail.</p>
-            </div>
-            <div class="card">
-                <h3>Preparation of Legal Documents</h3>
-                <p>Professional development of legal documents of any complexity:</p>
-                <ul class="docs-list">
-                    <li>Applications</li><li>Complaints</li><li>Petitions</li><li>Objections</li><li>Official appeals, etc.</li>
-                </ul>
-            </div>
-
-                       <div class="card">
-                <h3>Legal Analysis of Documents</h3>
-                <p>We will help you thoroughly understand the true legal content and hidden consequences of any documents in a clear, human language.</p>
-            </div>
-            <div class="card">
-                <h3>Individual Situations</h3>
-                <p>Every story is unique. That is why we always start our work exclusively with a deep analysis of the situation, rather than a boilerplate answer.</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h2>How the Work Processes</h2>
-        <div class="timeline">
-            <div class="step-box"><div class="step-num">Step 1</div><p class="step-text">You describe your situation in detail and provide the necessary documents for review.</p></div>
-            <div class="step-box"><div class="step-num">Step 2</div><p class="step-text">We carefully and comprehensively study the materials, then explain the possible courses of action in simple and understandable language.</p></div>
-            <div class="step-box"><div class="step-num">Step 3</div><p class="step-text">We prepare the necessary documents and clear recommendations so you can make decisions calmly, consciously, and strictly within the law.</p></div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Interaction Format</h2>
-        <div class="text-block" style="font-style: italic; margin-bottom: 25px;">Remote analytical work and strategic planning without geographical barriers.</div>
-        <div class="card-grid">
-
-                        <div class="card">
-                <h3>Geography of Presence</h3>
-                <p>The "Legal Strategist" project operates in a secure online mode <strong>throughout the entire territory of the Republic of Kazakhstan</strong>. Distance does not affect the depth of financial and analytical analysis.</p>
-            </div>
-            <div class="card">
-                <h3>Communication Channels</h3>
-                <p>Interaction and information exchange are carried out through digital channels convenient for you: <strong>WhatsApp • E-mail • Phone • Video call</strong>.</p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-               <section>
-        <h2>Personal Practice and Strategic Experience</h2>
-        <div class="text-block" style="font-style: italic; margin-bottom: 25px;">The "Legal Strategist" project is the result of 15 years of successful entrepreneurship and personal passage through the most complex legal barriers of the Republic of Kazakhstan.</div>
+        section { margin-bottom: 60px; }
         
-        <div class="card-grid">
-            <div class="card">
-                <h3>Entrepreneurship (15 years)</h3>
-                <p>Creating and managing a business from scratch. A full cycle of administration, financial planning, and successful realization of assets while maintaining an impeccable business reputation.</p>
-            </div>
-            <div class="card">
-                <h3>State Procurement and Tenders (4 years)</h3>
-                <p>Expert work with regulations, complex documentation, and government institutions within the tender system of the Republic of Kazakhstan.</p>
-            </div>
-            <div class="card">
-                <h3>Support of Bankruptcy Procedures</h3>
-                <p>Deep practical work at all stages of bankruptcy of individuals. Interaction with financial managers, risk identification, and protection of legal interests throughout the procedure until the final discharge of obligations.</p>
-            </div>
-            <div class="card">
-                <h3>Countering Fraud</h3>
-                <p>Successful personal experience in handling complex cases related to financial fraud — from gathering evidence to bringing the process to a court's guilty verdict.</p>
-            </div>
-            <div class="card">
-                <h3>Recovery of Accounts Receivable</h3>
-                <p>A full cycle of managing CLO (civil law obligations) in situations of active resistance from the debtor. Experience in detecting intentional asset diversion, hidden assets, and contesting transactions.</p>
-            </div>
-            <div class="card">
-                <h3>Asset Share Management</h3>
-                <p>Practice of allotment, valuation, and sale of a 1/2 share in the property of debtors, including overcoming legal obstacles from opponents.</p>
-            </div>
-            <div class="card">
-                <h3>Interaction under Art. 430 of the CC of the RK</h3>
-                <p>Current practical work with law enforcement agencies to bring debtors to criminal liability for malicious non-execution of judicial acts.</p>
-            </div>
-            <div class="card">
-                <h3>Financial Discipline</h3>
-                <p>4 years of experience in the banking sector. Strategic and clean closure of entrepreneurial activity without debts, in strict compliance with the recommendations of tax authorities.</p>
-            </div>
-            <div class="card">
-                <h3>Anti-Crisis Settlement</h3>
-                <p>Fruitful experience in tough and systemic negotiations with PEOs (private enforcement officers), banks, MFIs, and collection agencies to achieve the most favorable conditions.</p>
-            </div>
-            <div class="card">
-                <h3>Accessible Protection of Rights</h3>
-                <p>We help prepare procedural documents and build a position for independent actions, significantly reducing your protection costs.</p>
-            </div>
-            <div class="card">
-                <h3>Partnership with the Bar</h3>
-                <p>For cases requiring mandatory representation in court, we provide reliable interaction with a trusted partner-advocate.</p>
-            </div>
-            <div class="card">
-                <h3>Questions and Answers (FAQ)</h3>
-                <p>Basic clarifications on the regulations for express audit of materials, preparation of the basic document package, and chatbot launch algorithms for new clients.</p>
-            </div>
-        </div>
-    </section>
-
-
-
-          <section>
-        <h2>Our Principles</h2>
-        <div class="grid-principles">
-            <div class="principle-box"><div class="principle-title">Legality</div><p class="principle-desc">Work exclusively within the strict framework of the current legislation of the Republic of Kazakhstan.</p></div>
-            <div class="principle-box"><div class="principle-title">Honesty</div><p class="principle-desc">We never make empty promises and do not promise the obviously impossible.</p></div>
-            <div class="principle-box"><div class="principle-title">Clear Language</div><p class="principle-desc">Comfortable interaction and explanation of the essence without overloading with complex terminology.</p></div>
-            <div class="principle-box"><div class="principle-title">Individual Approach</div><p class="principle-desc">Every situation without exception requires a separate and detailed analysis.</p></div>
-            <div class="principle-box"><div class="principle-title">Confidentiality</div><p class="principle-desc">We treat the information entrusted to us with care and the highest responsibility.</p></div>
-            <div class="principle-box"><div class="principle-title">Responsibility</div><p class="principle-desc">Each procedural document is prepared expertly, carefully, and professionally.</p></div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Our Promise</h2>
-        <div class="text-block">We promise to speak with you honestly. If a legal solution exists, we will explain the possible ways in detail. If the situation is critically complex, we will openly tell you about all the risks. If additional time is required for analysis, we will not create false expectations.</div>
-        <div class="accent-quote" style="border-left: 2px solid var(--gold-solid); padding-left: 15px;">And regardless of the complexity of your situation, you can always firmly count on a respectful attitude and a professional approach.</div>
-    </section>
-
-    <section>
-        <h2>When We May Refuse</h2>
-        <div class="refuse-box">We fundamentally do not undertake the preparation of documents if, during the analysis, we understand that they can be used for a direct violation of the law, intentional misleading of anyone, or an obvious abuse of right.</div>
-    </section>
-
-
-      
-
-    <section>
-           <section>
-        <h2>Our Message</h2>
-        <div class="text-block">If at least one person, after getting to know the "Legal Strategist" project, feels calm, stops panicking about their situation, and believes that a way out can be sought consciously and within the framework of the law, then this project was not created in vain.</div>
-        <div class="text-block">We understand that we cannot change the past. We cannot promise easy, illusory solutions. We cannot guarantee the outcome of each individual case. But we can do everything to ensure that a person stops feeling alone with their problem. This is exactly what we see as the main purpose of our work.</div>
-        <div class="manifesto-text">We do not know exactly what path brought you here. But we sincerely hope that after getting to know our project, you will feel the main thing — a way out is always easier to find when understanding, respect, and the law are by your side.</div>
-    </section>
-
-    <section>
-        <div class="contacts-block">
-            <h2>Confidential Appeal</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0 0 30px 0;">Practice throughout the territory of Kazakhstan.</p>
-            
-               <section>
-        <h2>Our Message</h2>
-        <div class="text-block">If at least one person, after getting to know the "Legal Strategist" project, feels calm, stops panicking about their situation, and believes that a way out can be sought consciously and within the framework of the law, then this project was not created in vain.</div>
-        <div class="text-block">We understand that we cannot change the past. We cannot promise easy, illusory solutions. We cannot guarantee the outcome of each individual case. But we can do everything to ensure that a person stops feeling alone with their problem. This is exactly what we see as the main purpose of our work.</div>
-        <div class="manifesto-text">We do not know exactly what path brought you here. But we sincerely hope that after getting to know our project, you will feel the main thing — a way out is always easier to find when understanding, respect, and the law are by your side.</div>
-    </section>
-
-    <section>
-        <div class="contacts-block">
-            <h2>Confidential Appeal</h2>
-            <p style="font-size: 0.95rem; color: var(--text-muted); margin: 0 0 30px 0;">Practice throughout the territory of Kazakhstan.</p>
-            
-            <!-- ДВУХКОЛОНОЧНЫЙ БЛОК: СВЯЗЬ И РЕГЛАМЕНТ -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 35px; text-align: left; max-width: 740px; margin: 0 auto; align-items: stretch;">
-                
-                <!-- ЛЕВАЯ КОЛОНКА: КНОПКИ СВЯЗИ -->
-                <div class="contact-buttons" style="margin: 0; max-width: 100%; display: flex; flex-direction: column; justify-content: space-between; gap: 15px;">
-                   <a href="https://wa.me" class="contact-link" target="_blank">🔘 77776699833</a>
-                   <a href="https://t.me" class="contact-link" target="_blank">🔘 taya_lawyer_bot</a>
-                   <a href="mailto:taya2212.lex@gmail.com" class="contact-link">🔘 taya2212.lex@gmail.com</a>
-                </div>
-
-                <!-- ПРАВАЯ КОЛОНКА: СТРОГИЙ РЕГЛАМЕНТ ПРИЕМА -->
-                <div style="background: rgba(252, 249, 245, 0.02); border-left: 2px solid var(--gold-solid); padding: 10px 0 10px 25px; display: flex; flex-direction: column; justify-content: center;">
-                    <div style="font-family: 'Lora', serif; color: var(--gold-solid); font-size: 1.15rem; margin-bottom: 12px; letter-spacing: 0.5px;">Regulations for Processing Appeals</div>
-                    <div style="color: var(--text-main); font-size: 0.95rem; margin-bottom: 8px;">
-                        <strong>Reception Schedule:</strong><br>
-                        Mon–Fri: 10:00 AM – 7:00 PM | Sat: 10:00 AM – 1:00 PM<br>
-                        <span style="color: #e57373; opacity: 0.9;">Sunday — Closed</span>
-                    </div>
-                    <div style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; font-style: italic;">
-                        Initial inquiries are conducted strictly on a first-come, first-served basis and by mandatory prior appointment. Inappropriate calls are ignored.
-                    </div>
-                </div>
-                
-            </div>
-
-            <!-- ЮРИДИЧЕСКАЯ ОГОВОРКА ПОД КОЛОНКАМИ -->
-            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 30px; line-height: 1.4; text-align: center; width: 100%;">
-                By clicking the contact button, you accept the terms of the 
-                <a href="offer.html" target="_blank" style="color: var(--gold-solid); text-decoration: underline;">Public Offer</a> 
-                and give your 
-                <a href="agreement.html" target="_blank" style="color: var(--gold-solid); text-decoration: underline;">Consent to the processing of personal data</a>.
-            </p>
-        </div>
-    </section>
-
-
-    </section>
-
-        <footer style="padding: 40px 20px; border-top: 1px solid rgba(202, 169, 106, 0.1); margin-top: 50px; text-align: center;">
-        <!-- Mandatory requisites under the law of the RK -->
-        <p style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 5px;"><strong>IE [Наименование ИП латиницей]</strong></p>
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin: 0 0 15px 0;">IIN [Ваш ИИН] | Republic of Kazakhstan, [Ваш город]</p>
+        h2 { 
+            font-size: 1.8rem !important; 
+            font-family: 'Lora', serif !important;
+            font-weight: 400 !important; 
+            color: #caa96a !important; 
+            margin-top: 70px !important;
+            margin-bottom: 35px !important; 
+            letter-spacing: 3px !important; 
+            text-transform: uppercase; 
+            text-align: center !important; 
+        }
         
-        <!-- Data protection and commercial secrecy -->
-        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; max-width: 700px; margin: 0 auto 25px auto;">
-            © 2026 Project "Legal Strategist". All appeals are protected by the rules of strict commercial secrecy and confidentiality of the Republic of Kazakhstan.
-        </p>
+        .card-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(280px, 1fr)) !important;
+            gap: 30px !important; 
+            margin-top: 40px !important;
+            margin-bottom: 60px !important;
+            align-items: stretch !important; 
+        }
 
-        <!-- Mandatory advertisement marking -->
-        <p style="font-size: 0.75rem; color: var(--gold-solid); font-style: italic; letter-spacing: 1px; margin-top: 20px; border-top: 1px solid rgba(252, 249, 245, 0.03); padding-top: 15px;">
-            Жарнама / Реклама
-        </p>
-    </footer>
+        @media (max-width: 992px) {
+            .card-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            }
+        }
+
+        .card {
+            background: var(--bg-card) !important;
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            padding: 30px !important; 
+            border-radius: var(--radius-terminal) !important; 
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: flex-start !important;
+            text-align: left !important; 
+            height: 100% !important;
+            transition: var(--transition-smooth) !important;
+            box-sizing: border-box !important;
+        }
+
+        .card:hover {
+            border-color: rgba(202, 169, 106, 0.4) !important;
+            transform: translateY(-4px) !important;
+            box-shadow: 0 10px 30px rgba(202, 169, 106, 0.05) !important;
+        }
+
+        .card h3 {
+            color: #caa96a !important; 
+            font-family: 'Lora', serif !important;
+            font-size: 1.25rem !important;
+            font-weight: 400 !important;
+            margin-top: 0 !important;
+            margin-bottom: 15px !important;
+            line-height: 1.4 !important;
+            letter-spacing: 0.5px !important;
+        }
+
+        .card p, .card li {
+            margin: 0 !important;
+            line-height: 1.6 !important;
+            color: rgba(255, 255, 255, 0.85) !important;
+            text-align: left !important;
+        }
+
+        .docs-list { margin: 15px 0 0 0; padding-left: 20px; color: #caa96a; font-size: 0.9rem; list-style-type: '○ '; }
+        .docs-list li { margin-bottom: 8px; color: #cbd5e1; }
+
+        .timeline { 
+            display: flex !important; 
+            flex-direction: column !important; 
+            gap: 20px !important; 
+            max-width: 800px !important;
+            margin: 0 auto !important;
+        }
+        
+        .step-box { 
+            background: rgba(255, 255, 255, 0.02) !important;
+            border-left: 3px solid #caa96a !important; 
+            padding: 25px !important;
+            margin-bottom: 20px !important;
+            border-radius: 0 8px 8px 0 !important;
+            backdrop-filter: blur(10px) !important;
+            -webkit-backdrop-filter: blur(10px) !important;
+        }
+        
+        .step-num { 
+            color: #caa96a !important; 
+            font-family: 'Lora', serif !important;
+            font-size: 0.95rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 2px !important;
+            margin-bottom: 10px !important;
+            font-weight: bold !important;
+        }
+        
+        .step-text { 
+            font-size: 1.1rem !important;
+            color: var(--text-muted) !important;
+            margin: 0 !important;
+            text-align: left !important;
+        }
+
+        .grid-principles { 
