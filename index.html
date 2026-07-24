@@ -356,6 +356,81 @@
             margin: 0 auto 40px auto !important;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2) !important;
         }
+                /* ========================================================
+           ПРОФЕССИОНАЛЬНАЯ МОБИЛЬНАЯ АДАПТАЦИЯ (ШРИФТЫ И ОТСТУПЫ)
+           ======================================================== */
+
+        /* Корректировка для планшетов (экраны до 768px) */
+        @media (max-width: 768px) {
+            .nav-panel {
+                padding: 15px 20px !important; /* Уменьшаем отступы навигации по бокам */
+            }
+            header h1 {
+                font-size: 1.8rem !important; /* Слегка уменьшаем главный заголовок */
+                letter-spacing: 2px !important;
+            }
+            h2 {
+                font-size: 1.5rem !important; /* Корректируем заголовки секций */
+                margin-top: 50px !important;
+            }
+            .welcome-bento {
+                padding: 30px 25px !important; /* Делаем хрустальные рамки компактнее */
+                margin-bottom: 30px !important;
+            }
+            header p, .text-block, section p {
+                font-size: 1.05rem !important; /* Мягко уменьшаем текст для чтения */
+            }
+            /* Перестраиваем финальную сетку контактов в один столбец */
+            div[style*="display: grid"][style*="max-width: 740px"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+            /* Закругляем углы регламента со всех сторон на мобильных */
+            div[style*="border-radius: 0 6px 6px 0"] {
+                border-radius: 6px !important;
+                border-left: 1px solid rgba(255,255,255,0.05) !important;
+                border-top: 2px solid #caa96a !important; /* Переносим золотой акцент наверх */
+                padding: 25px 20px !important;
+            }
+        }
+
+        /* Корректировка для смартфонов (экраны до 480px) */
+        @media (max-width: 480px) {
+            .nav-panel {
+                padding: 15px 15px !important;
+                flex-direction: row !important; /* Оставляем логотип и языки в одну линию */
+            }
+            .logo-box svg {
+                width: 45px !important; /* Делаем логотип чуть компактнее */
+                height: 45px !important;
+            }
+            .lang-btn {
+                padding: 6px 12px !important; /* Уменьшаем кнопки языков */
+                font-size: 0.75rem !important;
+            }
+            header h1 {
+                font-size: 1.5rem !important; /* Заголовок не будет разбиваться на некрасивые куски */
+                letter-spacing: 1px !important;
+            }
+            header .subtitle {
+                font-size: 0.95rem !important;
+                letter-spacing: 1px !important;
+                margin-bottom: 25px !important;
+            }
+            .btn, header .btn, a.btn {
+                padding: 14px 28px !important; /* Кнопка идеально впишется в экран телефона */
+                font-size: 0.85rem !important;
+                width: 100% !important; /* Растягиваем кнопку на всю ширину экрана для удобного нажатия пальцем */
+                box-sizing: border-box !important;
+            }
+            .card {
+                padding: 20px !important; /* Экономим экранное пространство внутри карточек */
+            }
+            .card h3 {
+                font-size: 1.15rem !important;
+            }
+        }
+
     </style>
     </head>
 <body>
@@ -598,37 +673,33 @@
         </div>
     </section>
 
- <h2>Конфиденциальное обращение</h2>
-            <p style="font-size: 0.95rem; color: var(--text-sub); margin: 0 0 35px 0; font-style: italic; letter-spacing: 1px;"></p>
+            <h2 style="text-shadow: 1px 1px 3px #000000, -1px -1px 3px #000000, 1px -1px 3px #000000, -1px 1px 3px #000000, 0 3px 6px #000000 !important; margin-bottom: 5px !important; text-align: center !important;">Конфиденциальное обращение</h2>
+            <p style="font-size: 0.95rem; color: var(--text-sub); margin: 0 0 35px 0; font-style: italic; letter-spacing: 1px; text-align: center !important; text-shadow: 0 2px 4px rgba(0,0,0,0.9) !important;">Практика на всей территории Казахстана онлайн</p>
             
-                 <div style="display: grid !important; grid-template-columns: repeat(2, minmax(290px, 1fr)) !important; gap: 35px !important; text-align: left !important; max-width: 740px !important; margin: 0 auto !important; align-items: stretch !important;">
-            
-            <div class="contact-buttons" style="display: flex !important; flex-direction: column !important; gap: 15px !important; justify-content: space-between !important; margin: 0 !important;">
-               <a href="https://wa.me" class="contact-link" style="background: rgba(11, 19, 41, 0.05) !important; border: 1px solid #caa96a !important; box-shadow: 0 0 15px rgba(202, 169, 106, 0.1) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); text-shadow: 1px 1px 3px #000000, -1px -1px 3px #000000, 1px -1px 3px #000000, -1px 1px 3px #000000, 0 2px 5px #000000 !important; color: #caa96a !important; font-weight: bold !important; transition: all 0.3s ease !important;" target="_blank" onmouseover="this.style.background='#caa96a'; this.style.color='#070d19';" onmouseout="this.style.background='rgba(11, 19, 41, 0.05)'; this.style.color='#caa96a';">🔘 [ WHATSAPP ] +7 777 669 98 33</a>
-               <a href="https://t.me" class="contact-link" style="background: rgba(11, 19, 41, 0.05) !important; border: 1px solid #caa96a !important; box-shadow: 0 0 15px rgba(202, 169, 106, 0.1) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); text-shadow: 1px 1px 3px #000000, -1px -1px 3px #000000, 1px -1px 3px #000000, -1px 1px 3px #000000, 0 2px 5px #000000 !important; color: #caa96a !important; font-weight: bold !important; transition: all 0.3s ease !important;" target="_blank" onmouseover="this.style.background='#caa96a'; this.style.color='#070d19';" onmouseout="this.style.background='rgba(11, 19, 41, 0.05)'; this.style.color='#caa96a';">🔘 [ TELEGRAM ] TAYA_LAWYER_BOT</a>
-               <a href="mailto:taya2212.lex@gmail.com" class="contact-link" style="background: rgba(11, 19, 41, 0.05) !important; border: 1px solid #caa96a !important; box-shadow: 0 0 15px rgba(202, 169, 106, 0.1) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); text-shadow: 1px 1px 3px #000000, -1px -1px 3px #000000, 1px -1px 3px #000000, -1px 1px 3px #000000, 0 2px 5px #000000 !important; color: #caa96a !important; font-weight: bold !important; transition: all 0.3s ease !important;" onmouseover="this.style.background='#caa96a'; this.style.color='#070d19';" onmouseout="this.style.background='rgba(11, 19, 41, 0.05)'; this.style.color='#caa96a';">🔘 [ E-MAIL ] TAYA2212.LEX@GMAIL.COM</a>
+            <!-- ЖЕСТКАЯ ДВУХКОЛОНОЧНАЯ BENTO GRID СЕТКА С КОНТУРНЫМ ТЕКСТОМ И ИНТЕРАКТИВНЫМИ КНОПКАМИ -->
+            <div style="display: grid !important; grid-template-columns: repeat(2, minmax(290px, 1fr)) !important; gap: 35px !important; text-align: left !important; max-width: 740px !important; margin: 0 auto !important; align-items: stretch !important;">
+                
+                <div class="contact-buttons" style="display: flex !important; flex-direction: column !important; gap: 15px !important; justify-content: space-between !important; margin: 0 !important;">
+                   <a href="https://wa.me/77776699833" class="contact-link" style="background: rgba(11, 19, 41, 0.4) !important; border: 1.5px solid rgba(202, 169, 106, 0.7) !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 0 2px 4px #000000 !important; color: #caa96a !important; font-weight: bold !important; transition: all 0.3s ease !important; text-align: center !important; width: 100% !important; box-sizing: border-box !important;" target="_blank" onmouseover="this.style.background='#caa96a'; this.style.color='#070d19'; this.style.borderColor='#caa96a';" onmouseout="this.style.background='rgba(11, 19, 41, 0.4)'; this.style.color='#caa96a'; this.style.borderColor='rgba(202, 169, 106, 0.7)';">🔘 [ WHATSAPP ] +7 777 669 98 33</a>
+                   <a href="https://t.me/taya_lawyer_bot" class="contact-link" style="background: rgba(11, 19, 41, 0.4) !important; border: 1.5px solid rgba(202, 169, 106, 0.7) !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 0 2px 4px #000000 !important; color: #caa96a !important; font-weight: bold !important; transition: all 0.3s ease !important; text-align: center !important; width: 100% !important; box-sizing: border-box !important;" target="_blank" onmouseover="this.style.background='#caa96a'; this.style.color='#070d19'; this.style.borderColor='#caa96a';" onmouseout="this.style.background='rgba(11, 19, 41, 0.4)'; this.style.color='#caa96a'; this.style.borderColor='rgba(202, 169, 106, 0.7)';">🔘 [ TELEGRAM ] TAYA_LAWYER_BOT</a>
+                   <a href="mailto:taya2212.lex@gmail.com" class="contact-link" style="background: rgba(11, 19, 41, 0.4) !important; border: 1.5px solid rgba(202, 169, 106, 0.7) !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 0 2px 4px #000000 !important; color: #caa96a !important; font-weight: bold !important; transition: all 0.3s ease !important; text-align: center !important; width: 100% !important; box-sizing: border-box !important;" onmouseover="this.style.background='#caa96a'; this.style.color='#070d19'; this.style.borderColor='#caa96a';" onmouseout="this.style.background='rgba(11, 19, 41, 0.4)'; this.style.color='#caa96a'; this.style.borderColor='rgba(202, 169, 106, 0.7)';">🔘 [ E-MAIL ] TAYA2212.LEX@GMAIL.COM</a>
+                </div>
+
+                <!-- ХРУСТАЛЬНАЯ ПОДЛОЖКА С КОНТУРНЫМ ТЕКСТОМ РЕГЛАМЕНТА -->
+                <div style="background: rgba(11, 19, 41, 0.05) !important; border-left: 2px solid #caa96a !important; border-top: 1px solid rgba(255,255,255,0.05) !important; border-right: 1px solid rgba(255,255,255,0.05) !important; border-bottom: 1px solid rgba(255,255,255,0.05) !important; padding: 20px 25px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; border-radius: 0 6px 6px 0 !important; backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important;">
+                    <div style="font-family: 'Lora', serif !important; color: #caa96a !important; font-size: 1.15rem !important; margin-bottom: 12px !important; letter-spacing: 0.5px !important; text-transform: uppercase !important; text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 0 2px 4px #000000 !important; font-weight: bold !important;">Регламент обработки обращений</div>
+                    <div style="color: #ffffff !important; font-size: 0.95rem !important; margin-bottom: 8px !important; font-family: 'Lora', serif !important; text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 0 2px 4px #000000 !important;">
+                        <strong style="color: #caa96a !important;">График приема:</strong><br>
+                        Пн–Пт: 10:00 – 19:00 | Сб: 10:00 – 13:00<br>
+                        <span style="color: #e57373 !important; font-weight: bold !important; text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 0 2px 4px #000000 !important;">Воскресенье — выходной</span>
+                    </div>
+                    <div style="color: rgba(255, 255, 255, 0.9) !important; font-size: 0.9rem !important; line-height: 1.6 !important; font-style: italic !important; font-family: 'Lora', serif !important; text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 0 2px 4px #000000 !important;">
+                        Первичное обращение проводится строго в порядке очереди и по предварительной обязательной записи. Некорректные вызовы игнорируются.
+                    </div>
+                </div>
             </div>
 
-            <!-- ХРУСТАЛЬНАЯ ПОДЛОЖКА С КОНТУРНЫМ ТЕКСТОМ РЕГЛАМЕНТА -->
-            <div style="background: rgba(11, 19, 41, 0.05) !important; border-left: 2px solid #caa96a !important; border-top: 1px solid rgba(255,255,255,0.05) !important; border-right: 1px solid rgba(255,255,255,0.05) !important; border-bottom: 1px solid rgba(255,255,255,0.05) !important; padding: 20px 25px !important; display: flex !important; flex-direction: column !important; justify-content: center !important; border-radius: 0 6px 6px 0 !important; backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important;">
-                <div style="font-family: 'Lora', serif !important; color: #caa96a !important; font-size: 1.15rem !important; margin-bottom: 12px !important; letter-spacing: 0.5px !important; text-transform: uppercase !important; text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 0 2px 4px #000000 !important; font-weight: bold !important;">Регламент обработки обращений</div>
-                <div style="color: #ffffff !important; font-size: 0.95rem !important; margin-bottom: 8px !important; font-family: 'Lora', serif !important; text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 0 2px 4px #000000 !important;">
-                    <strong style="color: #caa96a !important;">График приема:</strong><br>
-                    Пн–Пт: 10:00 – 19:00 | Сб: 10:00 – 13:00<br>
-                    <span style="color: #e57373 !important; font-weight: bold !important;">Воскресенье — выходной</span>
-                </div>
-                <div style="color: rgba(255, 255, 255, 0.9) !important; font-size: 0.9rem !important; line-height: 1.6 !important; font-style: italic !important; font-family: 'Lora', serif !important; text-shadow: 1px 1px 2px #000000, -1px -1px 2px #000000, 1px -1px 2px #000000, -1px 1px 2px #000000, 0 2px 4px #000000 !important;">
-                    Первичное обращение проводится строго в порядке очереди и по предварительной обязательной записи. Некорректные вызовы игнорируются.
-                </div>
-            </div>
-        </div>
-
-
-            <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-top: 40px; line-height: 1.5; text-align: center; width: 100%; font-family: 'Lora', serif; letter-spacing: 0.3px;">
-
-
-
-            <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-top: 40px; line-height: 1.5; text-align: center; width: 100%; font-family: 'Lora', serif; letter-spacing: 0.3px;">
+            <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.6); margin-top: 40px; line-height: 1.5; text-align: center; width: 100%; font-family: 'Lora', serif; letter-spacing: 0.3px; text-shadow: 0 2px 4px rgba(0,0,0,0.9) !important;">
                 Нажимая на кнопку связи, вы безоговорочно принимаете условия 
                 <a href="offer.html" target="_blank" style="color: #caa96a; text-decoration: underline; font-weight: normal;">Публичной оферты</a> 
                 и даете официальное 
